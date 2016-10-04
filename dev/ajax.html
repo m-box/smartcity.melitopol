@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Send JSON console</title>
+
+
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    
+    <meta name="description" content="Send JSON" />
+    <meta name="keywords" content="json, javascript, jquery" />
+</head>
+<body>
+    <form method="post" action="#" id="myForm">
+        <p><textarea type="text" name="field1" id="field1"></textarea><label for="field1">JSON - запрос</label></p>	
+        <p><input type="text" name="field2" id="field2" /><label for="field2">Маршрут</label></p>
+
+        <p><input type="submit" name="sendBtn" value="Отправить" /></p>
+    </form><br>
+	<text id="result"></text>
+    
+    <script type="text/javascript" src="jquery-1.3.1.min.js"></script>
+    <script type="text/javascript" src="jquery.json-1.3.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#myForm").submit(function() {
+                var formData = $("#field1").val();
+				var route = $("#field2").val();
+                $.ajax({
+                    url:route
+                    , type:'POST'
+                    , data:'data=' + formData
+                    , success: function(res) {
+						$("#result").html(res);
+                       
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Сайт електроних сервісів міста Мелітополь. Кабінет самообслуговування, контаку з адміністрацією та мерією міста">
+<meta name=keywords content="SmartCity.Melitopol, SM, SmartCity, Melitopol">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name=author content="Сажнєв Михайло / 100000718680383, Вячеслав Рєдькін / 100012765812627, Станіслав Деріпаско / 100012813070004">
+<title >SmartCity.Melitopol. Кабінет електронних сервісів</title>
+<link href=css/fractal.css rel=stylesheet>
+<link href=css/bootstrap.min.css rel=stylesheet>
+<script src=js/jquery.min.js></script>
+<script src=js/bootstrap.min.js></script>
+<script src=js/log_user.js></script>
+<script type="text/javascript"  src= "js/JS_req.js"></script>
+</head>
+<body>
+<div id=scheader>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<h5 class=pull-right id=hello>Вітаємо, <a href=# data-toggle=modal data-target=#myModal>увійти в особистий кабінет</a>
+</h5>
+<div class="modal fade" id=myModal role=dialog>
+<div class="modal-dialog modal-sm">
+<div class=modal-content>
+<div class=modal-header>
+<button type=button class=close data-dismiss=modal>&times;</button>
+<h3>Увійти в систему</h3><br>
+<text style=color:red; id="err"></text>
+</div>
+<div class=modal-body>
+<form class=form-inline role=form>
+<div class=form-group>
+<label for=usrname><span class="glyphicon glyphicon-user"></span> Введіть логін</label>
+<input type=email class=form-control id=email placeholder=Логін>
+</div><br>
+<div class=form-group>
+<label for=psw><span class="glyphicon glyphicon-eye-open"></span> Введіть пароль</label>
+<input type=password class=form-control id=pwd placeholder=Пароль>
+</div><br>
+<a href=404.html>Нагадати пароль</a><br>
+<div class="checkbox pull-right">
+<label><input type=checkbox> Запам'ятати мене</label>
+</div><br>
+</form>
+</div>
+<div class=modal-footer>
+<a class="btn btn-primary" href=registration.html>Реєстрація</a>
+<button type=submit class="btn btn-primary" onclick = "login_1();" id = "login_0">Увійти</button>
+</div>
+</div>
+</div>
+</div>
+<a href=index.html><img src=img/logo.png alt="Кабінет електроних сервісів: SmartMelitopol" style="float:left;width:80px;height:80px;margin:10px 10px 0 0"/></a>
+<h3><p class=text-primary><b>SmartCity. <br>Кабінет електронних сервісів</b></p></h3>
+</div>
+</div>
+</div>
+</div>
+<div class=container>
+<div class=page-header>
+<ul class="nav nav-pills">
+<li><a href=concept.html>Концепція <span class=badge>1</span></a></li>
+<li><a href=index.html>Проекти <span class=badge>42</span></a></li>
+<li><a href=news.html>Новини <span class=badge>0</span></a></li>
+<li><a href=http://www.mlt.gov.ua>Міська влада <span class=badge>1</span></a></li>
+<li class=active><a href=faq.html>Допомога </a></li>
+<form class="navbar-form navbar-left pull-right" role=search>
+<div class=form-group>
+<input type=text class=form-control placeholder="Пошук сервісів">
+</div>
+<button type=submit class="btn btn-default">Пошук</button>
+</form>
+</ul>
+</div>
+<div class=jumbotron>
+<h1>Часті Питання (ЧаПи)</h1>
+<p>Карти гугл. Як визначати координати? Як скопіювати координати?</p>
+Визначати координати в спрощеному режимі (маленькому вікні сторінки, на мобільному пристрою тощо) неможливо.
+Щоб визначити координати місця на Картах Google:
+<ol>
+<li>Відкрийте Карти Google.</li>
+<li>Натисніть місце або область на карті правою кнопкою миші.</li>
+<li>Виберіть Що тут?</li>
+<li>Унизу екрана з’явиться картка з докладною інформацією де будуть присутні координати у вигляді широти та довготи. Наприклад: 46.842178, 35.373376.</li>
+<li>Ви можете натиснути на ці цифри, зліва з’явиться меню з додатковою інформацією про об’єкт. Звідти Ви можете скопіюувати цифри.</li>
+</ol>
+<p>Як заповнювати базу даних по енергетиці, навіщо там стільки кнопок і як вони працюють?</p>
+При запоненні таблиці важливо пам’ятати про права запису до них. Існує три категорії користувачів: Суперадмін, Адмін 1, та Адмін 2.
+Суперадмін має абсолютні права на запис та перезапис усіх комірок! Адмін 1 та Адмін 2 мають обмежені права запису які в першу чергу стосуються актуальних даних (показники витрат, зміни в організаційній структурі закладів, зміни конструктивних елементів закладів).
+Адмін 1 та Адмін 2 мають лише права на запис до комірок поточних показників. Прав перезапису даних за попередній період часу у них немає!
+При роботі з системою треба пам’ятати так речі
+<ol>
+<li>Суперадмін це тимчасовий користувач якого буде відключено після закінчення введення архівних даних.</li>
+<li>Суперадміністратору доступні комірки які згруповані для зручності в категорії "Основні ревізити об’єкту", "Додаткові дані про заклад", "Тарифи", "Показники".</li>
+<li>Суперадміністратор заповнбю комірки в групах "Основні реквізити об’єкту", "Додаткові дані про заклад" лише один раз, вони мають постійне значення для кожного обєкту. Ці комірки не змінюються динамічно й відображають поточний, а не архівний стан закладу. Всі комірки повинні бути актуальними на момент заповнння.</li>
+<li>Група "Тарифи" доступна всім привелігійованим користувачам, має чотири категорії з чотирма кнопками. Кожна відповідає за свою категорію: електрична енергія, газ, теплова енергія, вода. Треба пам’ятати що вносяться дані за будь який період часу, тому обов’язково треба заповнювати обидві (а для води - три) комірки для правильного відображення даних. Вносити дані треба уважно, перевіряючи вірність заповнення. Після цього натискається відповідна кнопка "Внести запис". Помилкове заповнення або пуста комірка мають бути обов’язково виправлені! Інакше сервіс буде функціонувати з помилками.</li>
+<li>Група "Показники" доступна всім привелігійованим користувачам, але архівні дані може вносити лише Суперадміністратор, ця група є найбільш динамічною та важливою для роботи сервісу. Кожен ряд має свою кнопку. Заповнювати необхідно усі комірки і лише потім натискати кнопку "Внести запис", інакше сервіс буде працювати з помилками. Вносити дані треба уважно, прискипливо контролювати дані які вносяться. Помилки необхідно виправляти повторним введенням даних за ту ж дату. В іншому разі сервіс буде працювати з помилками.</li>
+<li>Адмін 1 та Адмін 2 не мають можливості вносити дані за попередній період, вносяться лише показники. Дата вноситься системою автоматично відповідно поточній даті заповнення таблиці.</li>
+</ol>
+</div>
+<div class=list-group>
+<a href=sobes.html class=list-group-item>Калькулятор субсидій/інформація про статус</a>
+<a href=tobedone.html class=list-group-item>Оформлення паспорта прив’язки тимчасової споруди для провадження підприємницької діяльності</a>
+<a href=energo-face.html class=list-group-item>Муніципальне майно. Енергетика</a>
+<a href=tobedone.html class=list-group-item>Сплата послуг</a>
+<a href=tobedone.html class=list-group-item>Черга в ДНЗ</a>
+</div>
+<div class=page-header>
+</div>
+<footer>
+<div class=row>
+<div class=col-lg-12>
+<ul class="nav nav-pills">
+<li class=pull-right><a href=#top>Наверх </a></li>
+<li><a href=concept.html>Концепція </a></li>
+<li><a href=index.html>Проекти </a></li>
+<li><a href=news.html>Новини </a></li>
+<li><a href=http://www.mlt.gov.ua>Міська влада </a></li>
+<li><a href=faq.html>Допомога </a></li>
+<li><a href=support.html>Підтримка </a></li>
+</ul>
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>

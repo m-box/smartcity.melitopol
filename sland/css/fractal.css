@@ -1,0 +1,41 @@
+﻿/*!
+ * Вільна Країна
+ * Copyright 2016
+ * m-box.org.ua
+ */
+#rockit {
+  position:relative;
+  height:218px;
+  width:450px;  
+  margin:0 auto;
+}
+#rockit img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 0.7s ease-in-out;
+  -moz-transition: opacity 0.7s ease-in-out;
+  -o-transition: opacity 0.7s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
+}
+#rockit img.top:hover {
+  opacity:0;
+}
+#rockit a:link, a:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+#rockit a:hover, a:active {
+    background-color: green;
+    color: white;
+}
+.opacity:hover figcaption {
+	opacity: 0.8;
+}
+.opacity:hover img.top {
+	opacity: 0
+}

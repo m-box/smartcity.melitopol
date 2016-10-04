@@ -1,0 +1,501 @@
+﻿<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name=description content="Сайт електроних сервісів міста Мелітополь. Кабінет самообслуговування, контаку з адміністрацією та мерією міста">
+<meta name=keywords content="Smart Melitopol, SM, SmartMelitopol">
+<meta name=viewport content="width=device-width, initial-scale=1">
+<meta http-equiv=X-UA-Compatible content="IE=edge, chrome=1">
+<meta name=author content=Kazadoom>
+<title>SmartMelitopol. Кабінет електронних сервісів</title>
+<link href=css/fractal.css rel=stylesheet>
+<link href=css/bootstrap.min.css rel=stylesheet>
+<script src=js/jquery.min.js></script>
+<script src=js/bootstrap.min.js></script>
+<script src=js/log_user.js></script>
+<script type="text/javascript"  src= "js/JS_req.js"></script>
+</head>
+<body>
+<div id=scheader>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<h5 class=pull-right>Вітаємо, <a href=# data-toggle=modal data-target=#myModal>увійти в особистий кабінет</a>
+<a href=# onclick="logout_1();">Вийти</a>
+</h5>
+<div class="modal fade" id=myModal role=dialog>
+<div class="modal-dialog modal-sm">
+<div class=modal-content>
+<div class=modal-header>
+<button type=button class=close data-dismiss=modal>&times;</button>
+<h3>Информация</h3>
+</div>
+<div class=modal-body>
+
+
+<label>Loading...</label>
+<br>
+
+<div id="progress"></div><div> %</div>
+
+
+
+
+</div>
+
+</div>
+</div>
+</div>
+<a href=index.html><img src=img/logo.png alt="Кабінет електроних сервісів: SmartMelitopol" style="float:left;width:80px;height:80px;margin:10px 10px 0 0"/></a>
+<h3><p class=text-primary><b>SmartCity. <br>Кабінет електронних сервісів</b></p></h3>
+</div>
+</div>
+</div>
+</div>
+<div class=container>
+<div class=page-header>
+<ul class="nav nav-pills">
+<li><a href=concept.html>Концепція <span class=badge>1</span></a></li>
+<li class=active><a href=index.html>Проекти <span class=badge>42</span></a></li>
+<li><a href=news.html>Новини <span class=badge>0</span></a></li>
+<li><a href=http://www.mlt.gov.ua>Міська влада <span class=badge>1</span></a></li>
+<form class="navbar-form navbar-left pull-right" role=search>
+<div class=form-group>
+<input type=text class=form-control placeholder="Пошук сервісів">
+</div>
+<button type=submit class="btn btn-default">Пошук</button>
+</form>
+</ul>
+</div>
+
+<h1><p class=text-primary style=text-align:center><b>Список таблиц</b></p></h1>
+<div id="table_name">
+<center><b>Список ваших таблиц!</b></center>
+</div><br>
+<h1><p class=text-primary style=text-align:center id="text_holder"><b>Выбор привилегий</b></p></h1><br>
+<div id="table_read">
+
+</div><br>
+<script type="text/javascript">
+
+                var query={};
+				query.method="tables";
+				var requery=JSON.stringify(query);
+                $.ajax({
+                    url:"api/data"
+                    , type:'POST'
+                    , data:'data=' + requery
+                    , success: function(res) {
+						var pre = {};
+						pre = JSON.parse(res);
+
+							
+	
+	//Переопределяем строку
+	var DataCell =$('<center/>');
+	//Пробегаемся по ячейкам
+	$.each(pre.data,function() {
+		DataCell.append(
+			$('<a/>',{
+				class:"btn btn-primary",
+				style: "margin:5px",
+				onclick: "on_table(this); return false;",
+				text:this
+				
+			})
+		);
+	});
+
+
+						$("#table_name").html(DataCell);
+                       }
+                    
+                });
+				
+				
+				function on_table (obj)
+				{
+					$('#myModal').modal('show');
+					var progress=0;
+					var colvo;
+					var percent;
+					var name = obj.text;
+					$("#text_holder").html("Выбор привилегий - "+name+" >");
+					var dataq ={};
+					dataq.method="cols";
+					dataq.table=name;
+					var requery=JSON.stringify(dataq);
+
+					                $.ajax({
+                    url:"api/data"
+                    , type:'POST'
+                    , data:'data=' + requery
+                    , success: function(res) {
+						var pre = {};
+						pre = JSON.parse(res);
+						var DataCell=$('<table/>',{class:"table"}).append(
+							$('<thead/>'),
+							$('<tbody/>'),
+							$('<tfoot/>')
+						);
+						var cols_n = $('<tr/>');
+						var funtic = $('<th/>',{text:"Название ячейки"});
+						cols_n.append(funtic);
+						$.each(pre.data,function() {
+						funtic = $('<th/>',{text:this});
+						cols_n.append(funtic);
+													});
+						$("thead",DataCell).append(cols_n);													
+					
+					
+						colvo=pre.data.length;
+						percent=colvo/5;
+					
+
+						var methodrow = $('<tr/>');
+						funtic = $('<td/>',{text:"Используемый метод"});
+						methodrow.append(funtic);
+					
+						$.each(pre.data,function() {						
+						funtic=$('<td/>').append($('<table/>',{class:"table-bordered"}).append(
+							$('<tr/>').append($("<td/>").append($("<div/>",{style:"-webkit-writing-mode: vertical-rl; writing-mode:tb-rl; margin:0px;" , text:"GET"})),
+							$("<td/>").append($("<div/>",{style:"-webkit-writing-mode: vertical-rl; writing-mode:tb-rl; margin:0px;" , text:"POST"})),
+							$("<td/>").append($("<div/>",{style:"-webkit-writing-mode: vertical-rl; writing-mode:tb-rl; margin:0px;" , text:"PUT"})),
+							$("<td/>").append($("<div/>",{style:"-webkit-writing-mode: vertical-rl; writing-mode:tb-rl; margin:0px;" , text:"DELETE"})),
+							$("<td/>").append($("<div/>",{style:"-webkit-writing-mode: vertical-rl; writing-mode:tb-rl; margin:0px;" , text:"GET_IF"}))
+							)));
+						methodrow.append(funtic);	
+						});
+						$("tbody",DataCell).append(methodrow);						
+						
+						
+					var datau ={};
+					datau.method="get";
+					
+					var requery=JSON.stringify(datau);
+					
+					                $.ajax({
+                    url:"api/usertype"
+					//, async:false
+                    , type:'POST'
+                    , data:'data=' + requery
+                    , success: function(res) {
+						var pres = {};
+						pres = JSON.parse(res);
+						var user_type = $('<tr/>');
+						var id_user_type;
+						$.each(pres.data,function() {
+						id_user_type=this.id;
+						funtic = $('<td/>',{text:this.name+" ID:"+this.id});
+						user_type.append(funtic);
+						$.each(pre.data,function() {
+
+						/* запрос на проверку существующих привилегий */
+						
+					var checkPriv = function(method, col, callback) {
+						var data = {
+							method: "get_if",
+							data: [
+								["id_user_type","=",id_user_type],
+								["method","=", method],
+								["table","=",name],
+								["col","=", col]
+							]
+						}
+						console.log("DATA", data)
+						var datastr = "data=" + JSON.stringify(data)
+						$.ajax({
+							url:"api/privilege"
+							, async: true
+							, type:'POST'
+							, data: datastr
+							, success: function(res) {
+								var input = JSON.parse(res);
+								callback(input.data == "error")
+								}
+							});
+					}
+	
+					/*
+						var get, post, put, delet, get_if; 
+						var privilege ={};
+						var data = {}
+						var if_this=[];
+						var col_n;
+						if_this[0]=["id_user_type","=",id_user_type];
+						if_this[1]=["method","=","get"];
+						if_this[2]=["table","=",name];
+						if_this[3]=["col","=",this];
+						data=if_this;
+						privilege.method="get_if";
+						privilege.data=data;
+						col_n=this;
+						var requerty=JSON.stringify(privilege);
+					$.ajax({
+                    url:"api/privilege"
+					, async:false
+                    , type:'POST'
+                    , data:'data=' + requerty
+                    , success: function(res) {
+						var input = {};
+						input = JSON.parse(res);
+						if (input.data=="error")
+						{get=false;}
+						else
+						{get=true;}
+						progress=progress+percent;
+						$('#progress').html(progress);
+						}
+					});
+					if_this[1]=["method","=","post"];
+					data=if_this;
+					privilege.data=data;
+					requerty=JSON.stringify(privilege);
+					$.ajax({
+                    url:"api/privilege"
+					, async:false
+                    , type:'POST'
+                    , data:'data=' + requerty
+                    , success: function(res) {
+						var input = {};
+						input = JSON.parse(res);
+						if (input.data=="error")
+						{post=false;}
+						else
+						{post=true;}
+						progress=progress+percent;
+					$('#progress').html(progress);
+					}
+					});
+					
+					if_this[1]=["method","=","put"];
+					data=if_this;
+					privilege.data=data;
+					requerty=JSON.stringify(privilege);
+					$.ajax({
+                    url:"api/privilege"
+					, async:false
+                    , type:'POST'
+                    , data:'data=' + requerty
+                    , success: function(res) {
+						var input = {};
+						input = JSON.parse(res);
+						if (input.data=="error")
+						{put=false;}
+						else
+						{put=true;}
+						progress=progress+percent;
+					$('#progress').html(progress);
+					}
+					});	
+
+					if_this[1]=["method","=","delete"];
+					data=if_this;
+					privilege.data=data;
+					requerty=JSON.stringify(privilege);
+					$.ajax({
+                    url:"api/privilege"
+					, async:false
+                    , type:'POST'
+                    , data:'data=' + requerty
+                    , success: function(res) {
+						var input = {};
+						input = JSON.parse(res);
+						if (input.data=="error")
+						{delet=false;}
+						else
+						{delet=true;}
+						progress=progress+percent;
+					$('#progress').html(progress);
+					}
+					});					
+
+					if_this[1]=["method","=","get_if"];
+					data=if_this;
+					privilege.data=data;
+					requerty=JSON.stringify(privilege);
+					$.ajax({
+                    url:"api/privilege"
+					, async:false
+                    , type:'POST'
+                    , data:'data=' + requerty
+                    , success: function(res) {
+						var input = {};
+						input = JSON.parse(res);
+						if (input.data=="error")
+						{get_if=false;}
+						else
+						{get_if=true;}
+						progress=progress+percent;
+					$('#progress').html(progress);
+					}
+					});							
+					*/
+						/* Окончание данного запроса */
+
+
+
+
+
+
+							var col_n = this;
+							
+							user_type.append($('<td/>').append($('<table/>',{class:"table-bordered"}).append(
+								$('<tr/>').append($("<td/>").append($("<input/>",{onchange:"on_privilege(this);", meth:"get", table:name, user:id_user_type, col:col_n, style:"-webkit-writing-mode: vertical-rl; writing-mode:tb-rl; margin:0px;" , type:"checkbox"})),
+								$("<td/>").append($("<input/>",{onchange:"on_privilege(this);", meth:"post",   table:name, user:id_user_type, col:col_n, style:"-webkit-writing-mode: vertical-rl; writing-mode:tb-rl; margin:0px;" , type:"checkbox"})),
+								$("<td/>").append($("<input/>",{onchange:"on_privilege(this);", meth:"put",    table:name, user:id_user_type, col:col_n, style:"-webkit-writing-mode: vertical-rl; writing-mode:tb-rl; margin:0px;" , type:"checkbox"})),
+								$("<td/>").append($("<input/>",{onchange:"on_privilege(this);", meth:"delete", table:name, user:id_user_type, col:col_n, style:"-webkit-writing-mode: vertical-rl; writing-mode:tb-rl; margin:0px;" , type:"checkbox"})),
+								$("<td/>").append($("<input/>",{onchange:"on_privilege(this);", meth:"get_if", table:name, user:id_user_type, col:col_n, style:"-webkit-writing-mode: vertical-rl; writing-mode:tb-rl; margin:0px;" , type:"checkbox"}))
+								))));
+							
+							
+						
+							function checkAndSet(method, col, callback) {					
+								checkPriv(method, col, function(error) {
+									var sel = '#table_read > table > tfoot > tr > td:nth-child(2) > table > tbody > tr > td > input[meth="' + method + '"]'
+									var cb = document.querySelector(sel)
+									$(cb).attr("checked", !error)
+									if (callback) {
+										callback();
+									}
+								})
+							}
+							var methods = ['get', 'post']
+							var method_called_count = 0
+							for (i in methods) {
+								method = methods[i]
+								checkAndSet(method, col_n, function(){
+									method_called_count += 1
+									var percent = Math.round(1000 * method_called_count / methods.length)/10
+									$('#progress').html(percent);
+								})
+							}
+							
+							});
+							$("tfoot",DataCell).append(user_type);
+						
+						});
+						
+						
+					}
+
+					});
+						
+					$("#table_read").html(DataCell);
+				
+				}});
+				$('#progress').html(progress);
+				}
+				
+function on_privilege(obj)
+{
+ if(!obj.checked)
+ {
+						var privilege ={};
+						var data = {}
+						var if_this=[];
+						
+						if_this[0]=["id_user_type","=",$(obj).attr('obj.user')];
+						if_this[1]=["method","=",$(obj).attr('obj.meth')];
+						if_this[2]=["table","=",$(obj).attr('obj.table')];
+						if_this[3]=["col","=",$(obj).attr('obj.col')];
+						data=if_this;
+						privilege.method="get_if";
+						privilege.data=data;
+						
+						var requerty=JSON.stringify(privilege);
+					$.ajax({
+                    url:"api/privilege"
+					, async:false
+                    , type:'POST'
+                    , data:'data=' + requerty
+                    , success: function(res) {
+						var input = {};
+						input = JSON.parse(res);
+						if (input.data=="error")
+						{}
+						else
+						{var id=input.data.id;
+						var unsig={};
+						unsig.method="delete";
+						unsig.id=id;
+						var re=JSON.stringify(unsig);
+							$.ajax({
+							url:"api/privilege"
+							, async:false
+							, type:'POST'
+							, data:'data=' + re
+							, success: function(res) {}
+							});
+						
+						}
+					}});
+ }
+ else
+ {
+		var privilege ={};
+						var data = {}
+						var if_this=[];
+						
+						if_this[0]=["id_user_type","=",$(obj).attr('obj.user')];
+						if_this[1]=["method","=",$(obj).attr('obj.meth')];
+						if_this[2]=["table","=",$(obj).attr('obj.table')];
+						if_this[3]=["col","=",$(obj).attr('obj.col')];
+						data=if_this;
+						privilege.method="get_if";
+						privilege.data=data;
+						
+						var requerty=JSON.stringify(privilege);
+					$.ajax({
+                    url:"api/privilege"
+					, async:false
+                    , type:'POST'
+                    , data:'data=' + requerty
+                    , success: function(res) {
+						var input = {};
+						input = JSON.parse(res);
+						if (input.data=="error")
+						{var id=input.data.id;
+						var unsig={};
+						var data={};
+						unsig.method="post";
+						data.id_user_type=$(obj).attr('obj.user');
+						data.method=$(obj).attr('obj.meth');
+						data.table=$(obj).attr('obj.table');
+						data.col=$(obj).attr('obj.col');
+						unsig.data=data;
+						var re=JSON.stringify(unsig);
+							$.ajax({
+							url:"api/privilege"
+							, async:false
+							, type:'POST'
+							, data:'data=' + re
+							, success: function(res) {}
+							});
+						
+						}
+						else
+						{}
+					}}); 
+ }
+}
+</script>
+<div class=page-header>
+</div>
+<footer>
+<div class=row>
+<div class=col-lg-12>
+<ul class="nav nav-pills">
+<li class=pull-right><a href=#top>Наверх </a></li>
+<li><a href=concept.html>Концепція </a></li>
+<li><a href=index.html>Проекти </a></li>
+<li><a href=news.html>Новини </a></li>
+<li><a href=http://www.mlt.gov.ua>Міська влада </a></li>
+</ul>
+</div>
+</div>
+</footer>
+</div>
+<!--<script type="text/javascript"  src= "js/JS_req.js"></script>-->
+</body>
+</html>
