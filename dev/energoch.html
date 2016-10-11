@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang=en>
 <head>
 <meta charset="UTF-8">
@@ -14,8 +14,10 @@
 <script src=js/bootstrap.min.js></script>
 <script src=js/log_user.js></script>
 <script type="text/javascript"  src= "js/JS_req.js"></script>
+<script type="text/javascript"  src= "js/markers.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 </head>
-<body>
+<body onload="initialize()">
 <div id=scheader>
 <div class=container>
 <div class=row>
@@ -80,95 +82,64 @@
 <strong>Увага!</strong> Сайт знаходиться в розробці, працює <a href=# class=alert-link>в режимі обмеженого доступу</a>.
 </div>
 <h2><span class="label label-info">Муніципальне майно. Динаміка споживання по закладам</span></h2>
-<!--в кнопку щось зробити з безпекою та її активністю/неактивністю-->
 <a class="btn btn-warning pull-right disabled" href=energosad.html>Адміністрування</a><br>
-<link href=css/datepicker.css rel=stylesheet>
-<script src=js/bootstrap-datepicker.js></script>
-<script src=js/dt.js></script>
-<script type=text/javascript src=https://www.gstatic.com/charts/loader.js></script>
-<!--не робочий, Слава, копіпасть сюдой свій!
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
- function drawChart() {
-      var jsonData = $.ajax({
-          url: "getData.php",
-          dataType: "json",
-          async: false
-          }).responseText;
-
- var data = new google.visualization.DataTable(jsonData);
-
-        var options = {
-          title: 'Company Performance',
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-        chart.draw(data, options);
-      }
-    </script>
--->
-<h3>Оберіть проміжок часу</h3>
+<h3>Оберіть об'єкт для аналізу</h3>
 <div class=well>
-<div class="alert alert-error" id=alert>
-<strong>Оберіть початкову та кінцеву дати</strong>
+<div class=row>
+<div class="col-md-12">
+<div id="map" style="height:400px; width=100%;"></div>
 </div>
-<table class=table>
-<thead>
-<tr>
-<th>Початкова дата <button type=button class="btn btn-default" id=dp4 data-date-format=yyyy-mm-dd data-date=2016-01-01>Вибрати</button></th>
-<th>Кінцева дата <button type=button class="btn btn-default" id=dp5 data-date-format=yyyy-mm-dd data-date=2016-10-25>Вибрати</button></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td id=startDate>2016-01-01</td>
-<td id=endDate>2016-10-25</td>
-</tr>
+<div class="col-md-6">
+<table class="table table-striped" style=height:250px>
+<thead><center><b>Тип закладу</b></center></thead>
+<tbody style="overflow-y:scroll; height:90%; width:90%; position:absolute;">
+<tr style="width:100%; display:inline-table;"><td>Мелітопольський дошкільний навчальний заклад № 14. "Теремок"</td></tr>
+<tr><td>Дошкільний навчальний заклад №99 "Зірочка"</td></tr>
+<tr><td>Дошкільний навчальний заклад №5 "Перлинка" </td></tr>
+<tr><td>Дошкільний нвчальний заклад № 43 "Сонечко" </td></tr>
+<tr><td>Дошкільний навчальний заклад №38 "Попелюшка" </td></tr>
+</tbody>
+</table>	
+</div>
+<div class=col-md-6>
+<table class="table table-striped" style=height:250px>
+<thead><center><b>Назва закладу</b></center></thead>
+<tbody style="overflow-y:scroll; height:90%; width:90%; position:absolute;">
+<tr style=width:100%;display:inline-table><td>Мелітопольський дошкільний навчальний заклад № 14. "Теремок"</td></tr>
+<tr><td>Дошкільний навчальний заклад № 21. "Вербонька"</td></tr>
+<tr><td>дошкільний навчальний заклад № 24. "Ластівка"</td></tr>
+<tr><td>Дошкільний навчальний заклад № 29. "Золотий півник"</td></tr>
+<tr><td>Дошкільний навчальний заклад № 36. "Берізка"</td></tr>
+<tr><td>Дошкільний навчальний заклад № 39 "Чебурашка" </td></tr>
+<tr><td>Дошкільний навчальний заклад № 44 </td></tr>
+<tr><td>Дошкільний навчальний заклад № 48 "Ведмедик" </td></tr>
+<tr><td>Дошкільний навчальний заклад № 49 "Горобинка" </td></tr>
+<tr><td>Дошкільний навчальний заклад № 78 "Вогник" загального типу Мелітопольської міської ради Запорізької області</td></tr>
+<tr><td>Дошкільний навчальний заклад № 8 "Зірочка" </td></tr>
+<tr><td>Дошкільний навчальний заклад № 9 "Лелеченя" </td></tr>
+<tr><td>Комірка 10 </td></tr>
+<tr><td>Комірка 11 </td></tr>
+<tr><td>Комірка 12 </td></tr>
+<tr><td>Комірка 13 </td></tr>
+<tr><td>Комірка 14 </td></tr>
+<tr><td>Комірка 15 </td></tr>
+<tr><td>Комірка 16 </td></tr>
+<tr><td>Комірка 17 </td></tr>
+<tr><td>Комірка 18 </td></tr>
+<tr><td>Комірка 19 </td></tr>
+<tr><td>Комірка 20 </td></tr>
+<tr><td>Комірка 21 </td></tr>
+<tr><td>Комірка 22 </td></tr>
+<tr><td>Комірка 23 </td></tr>
+<tr><td>...</td></tr>
+<tr><td>Дошкільний навчальний заклад №99 "Зірочка"</td></tr>
+<tr><td>Дошкільний навчальний заклад №5 "Перлинка" </td></tr>
+<tr><td>Дошкільний нвчальний заклад № 43 "Сонечко" </td></tr>
+<tr><td>Дошкільний навчальний заклад №38 "Попелюшка" </td></tr>
 </tbody>
 </table>
 </div>
-<h3>Оберіть ресурс</h3>
-<div class=well>
-<div class=row>
-<div class=col-md-3>
-<div class=radio>
-<label><input type=radio name=optradio1>Кількість кВт</label>
 </div>
-<div class=radio>
-<label><input type=radio name=optradio1>Кількість газу</label>
-</div>
-<div class=radio>
-<label><input type=radio name=optradio1>Кількість води</label>
-</div>
-<div class=radio>
-<label><input type=radio name=optradio1>Кількість тепла</label>
-</div>
-</div>
-<div class=col-md-3>
-<div class=radio>
-<label><input type=radio name=optradio1>Вартість кВт</label>
-</div>
-<div class=radio>
-<label><input type=radio name=optradio1>Вартість газу</label>
-</div>
-<div class=radio>
-<label><input type=radio name=optradio1>Вартість води</label>
-</div>
-<div class=radio>
-<label><input type=radio name=optradio1>Вартість тепла</label>
-</div>
-</div>
-<button type=button class="btn btn-primary pull-right">Аналізувати</button>
-</div>
-</div>
-<h3>Діаграма витрат</h3>
-<div class=well>
-<div id=curve_chart style=width:900px;height:500px></div>
 </div>
 <center><h3><span class="label label-info">Аналіз показників енерговитрат</span></h3></center><br>
 <div class=row>

@@ -59,20 +59,9 @@
 <div class=modal-content>
 <div class=modal-header>
 <button type=button class=close data-dismiss=modal  onClick="refreshPage()">&times;</button>
-<div class="container">
-<div class="row">
-<div class="col-sm-2">
-<img src="images/200px-Melitopol_COA.png" height=80px></img>
+<h3>Статус субсидії</h3>
 </div>
-<div class="col-sm-10">
-<strong><b>УПРАВЛІННЯ СОЦІАЛЬНОГО ЗАХИСТУ<br>
-МЕЛІТОПОЛЬСЬКОЇ МІСЬКОЇ РАДИ<br>
-ІНФОРМАЦІЯ ПРО ПРИЗНАЧЕННЯ СУБСИДІЇ<br></b></strong>
-</div>
-</div>
-</div>
-</div>
-<div class=modal-body id=sub_info style="font-size:10px">
+<div class=modal-body id=sub_info>
 <!--<label for=psw><span class="glyphicon glyphicon-ok" style=color:green></span> @NAME @Fname @Mname, Вам нарахована субсидія! Сума субсидії складає @SUM_SYBS грн. Субсидія діє від: @DATA_POCH до: @DATA_KIN.</label>
 <p><h4>Повідомлення про надання субсидій @N_SPRAVY </h4></p>
 1. <b>@COL 9 @COL 10 @COL 11</b><br>
@@ -138,8 +127,6 @@
 </div>
 <div id=collapse1 class="panel-collapse collapse">
 <div class=panel-body>
-Калькулятор буде тут.
-Принцип розрахунку субсидії взято з <a href=http://sobes.ua/ua/gazeta/blogs/entry/shcho-take-elektronna-subsidijna-sprava-ess-1>порталу соціального забезпечення України</a>. Від 28.02.2015. <br>
 Для розрухунку суми та структури субсидій заповніть наступну форму:
 <b><h3>1. Кількість зареєстрованих осіб у квартирі (будинку): </h3></b>
 Вписувати треба лише кількість <b>зареєстрованих осіб</b>, а не проживаючих в приміщенні.<br>
@@ -148,41 +135,41 @@
 Сукупний дохід сім’ї включає нараховану заробітну плату, пенсії, допомоги, стипендії та інші доходи, що підлягають оподаткуванню відповідно до законодавства і визначаються за даними останніх шести місяців (двох кварталів), що передують місяцю звернення за наданням субсидії. Враховується і дохід, зумовлений майновим станом. Розрахунок сукупного доходу для призначення субсидії проводиться відповідно до <a href=http://zakon5.rada.gov.ua/laws/show/z0112-02>Методики обчислення сукупного доходу сім’ї для всіх видів соціальної допомоги</a>. Заповнити треба всі поля, якщо Ви не мали жодних джерел прибутку в певний місяц, вказуйте у відповідному полі "0".<br>
 <style>input{-webkit-appearance:textfield;-moz-appearance:textfield;-o-appearance:textfield;appearance:textfield}input::-webkit-inner-spin-button{display:none}0</style>
 <div class=row>
-<div class="col-sm-1 text-center">Січень, 2015
-<input class=form-control id=dohid1 type=number min=1 value>
+<div class="col-xs-1 text-center" style=min-width:70px>Січень, 2015
+<input class=form-control id=dohid1 style=min-width:60px type=number min=1 value>
 </div>
-<div class="col-sm-1 text-center">Лютий, 2015
-<input class=form-control id=dohid2 type=number min=1 value>
+<div class="col-xs-1 text-center" style=min-width:70px>Лютий, 2015
+<input class=form-control id=dohid2 style=min-width:60px type=number min=1 value>
 </div>
-<div class="col-sm-1 text-center">Березень, 2015
-<input class=form-control id=dohid3 type=number min=1 value>
+<div class="col-xs-1 text-center" style=min-width:70px>Березень, 2015
+<input class=form-control id=dohid3 style=min-width:60px type=number min=1 value>
 </div>
-<div class="col-sm-1 text-center">Квітень, 2015
-<input class=form-control id=dohid4 type=number min=1 value>
+<div class="col-xs-1 text-center" style=min-width:70px >Квітень, 2015
+<input class=form-control id=dohid4 style=min-width:60px type=number min=1 value>
 </div>
-<div class="col-sm-1 text-center">Травень, 2015
-<input class=form-control id=dohid5 type=number min=1 value>
+<div class="col-xs-1 text-center" style=min-width:70px >Травень, 2015
+<input class=form-control id=dohid5 style=min-width:60px type=number min=1 value>
 </div>
-<div class="col-sm-1 text-center">Червень, 2015
-<input class=form-control id=dohid6 type=number min=1 value>
+<div class="col-xs-1 text-center" style=min-width:70px >Червень, 2015
+<input class=form-control id=dohid6 style=min-width:60px type=number min=1 value>
 </div>
-<div class="col-sm-1 text-center">Липень, 2015
-<input class=form-control id=dohid7 type=number min=1 value>
+<div class="col-xs-1 text-center" style=min-width:70px >Липень, 2015
+<input class=form-control id=dohid7 style=min-width:60px type=number min=1 value>
 </div>
-<div class="col-sm-1 text-center">Серпень, 2015
-<input class=form-control id=dohid8 type=number min=1 value>
+<div class="col-xs-1 text-center" style=min-width:70px >Серпень, 2015
+<input class=form-control id=dohid8 style=min-width:60px type=number min=1 value>
 </div>
-<div class="col-sm-1 text-center">Вересень, 2015
-<input class=form-control id=dohid9 type=number min=1 value>
+<div class="col-xs-1 text-center" style=min-width:70px >Вересень, 2015
+<input class=form-control id=dohid9 style=min-width:60px type=number min=1 value>
 </div>
-<div class="col-sm-1 text-center">Жовтень, 2015
-<input class=form-control id=dohid10 type=number min=1 value>
+<div class="col-xs-1 text-center" style=min-width:70px >Жовтень, 2015
+<input class=form-control id=dohid10 style=min-width:60px type=number min=1 value>
 </div>
-<div class="col-sm-1 text-center">Листопад, 2015
-<input class=form-control id=dohid11 type=number min=1 value>
+<div class="col-xs-1 text-center" style=min-width:70px >Листопад, 2015
+<input class=form-control id=dohid11 style=min-width:60px type=number min=1 value>
 </div>
-<div class="col-sm-1 text-center">Грудень, 2015
-<input class=form-control id=dohid12 type=number min=1 value><br>
+<div class="col-xs-1 text-center" style=min-width:70px >Грудень, 2015
+<input class=form-control id=dohid12 style=min-width:60px type=number min=1 value><br>
 </div>
 </div>
 <b><h3>3. Площа приміщення: </h3></b>
@@ -195,18 +182,21 @@
 <div class=input-group><span class=input-group-addon>середня вартість послуг</span><input class=form-control id=paltazacomun type=number min=1 style=width:150px value></div><br>
 </div>
 <div class="col-sm-6 text-center">
-<br><strong class="alert alert-info" id="result">Заповніть комірки</strong><br><br>
-<button type=button class="btn btn-default btn-success pull-right" onclick=calcsobes()>Відправити</button>
+<div class="alert alert-success">
+<strong id="result">Заповніть комірки</strong>
+</div>
+<button type=button class="btn btn-lg btn-success pull-right" onclick=calcsobes()>Розрахувати</button>
 </div>
 </div>
 </div>
 </div>
 </div>
+
 <div class="panel panel-default">
 <div class=panel-heading>
 <h4 class=panel-title>
 <a data-toggle=collapse data-parent=#accordion href=#collapse2>
-<h2><span class="glyphicon glyphicon-list-alt"></span> Запит статусу субсидій</h2></a>
+<h2><span class="glyphicon glyphicon-ok-circle"></span> Запит статусу субсидій</h2></a>
 </h4>
 </div>
 <div id=collapse2 class="panel-collapse collapse">
@@ -214,7 +204,7 @@
 <div class="panel panel-info">
 <div class=panel-heading><h4>Для отримання інформації щодо статусу субсидії треба заповнити форму. <br></div>
 Вводити треба дані, які Ви використали для отримання субсидій. <br>
-Якщо відповідь системи Вас не задовольнила, перевіре введені дані на предмет помилки. <br></h4>
+Якщо відповідь системи Вас не задовольнила, перевірте введені дані на предмет помилки. <br></h4>
 </div>
 <div class="panel panel-info">
 <div class=panel-heading>Введіть номер особистого рахунку від водоканалу</div>
@@ -223,13 +213,153 @@
 <div class=input-group><input type=text class=form-control id="surname_ukr" value="" placeholder=Сидоренко></div><br>
 <div class=panel-heading>Введіть Ваше прізвище російською мовою<a href=#note style=color:red>*</a></div>
 <div class=input-group><input type=text class=form-control id="surname_rus"  value="" placeholder=Сидоренко></div><br>
-<div class="g-recaptcha" data-sitekey="6LeRJgcUAAAAAHsRf4qu1UCygwxaVW8jC6Lx4vmR"></div><text style="color:red;"  id="captcha_err"></text><br>
-<button class="btn btn-info btn-lg" data-toggle=modal onclick="sub_info()"> Запит</button>
+<div class="g-recaptcha" data-sitekey="6LcvXQgUAAAAAOrCsSpxOBAjwvkbjxWl-B0-PbjC"></div><text style="color:red;"  id="captcha_err"></text><br>
+<button class="btn btn-primary btn-lg" onClick="sub_info()"> Запит</button>
 </div>
 <h5 id=note style=color:red>*запит прізвища російською мовою діє тимчасово, у звя’зку з особливістю бази даних Мінсоцполітики міста.</h5>
 </div>
 </div>
 </div>
+
+<div class="panel panel-default">
+<div class=panel-heading>
+<h4 class=panel-title>
+<a data-toggle=collapse data-parent=#accordion href=#collapse3>
+<h3><span class="glyphicon glyphicon-check"></span> Як заповнити заявку на субсидію</h3></a>
+</h4>
+</div>
+<div id=collapse3 class="panel-collapse collapse">
+<div class=panel-body>
+<div class="panel panel-info">
+<div class=panel-heading>ІНСТРУКЦІЯ ПРО ПОРЯДОК ЗАПОВНЕННЯ БЛАНКУ ЗАЯВИ ПРО ПРИЗНАЧЕННЯ ЖИТЛОВОЇ СУБСИДІЇ</div>
+</div>
+1. Заяву заповнює особа за місцем реєстрації (або особа, яка орендує житло і фактично сплачує вартість одержуваних послуг). Особи, які орендують житло, додають до Заяви договір найму (оренди) житла.
+
+2. У правому верхньому куті має бути зазначено назва місцевого управління соціального захисту населення, до якого подається Заява.
+
+3. У заяві зазначаються відомості про особу: прізвище, ім’я по батькові, зареєстроване місце проживання (для орендарів – фактичне місце проживання) із зазначенням адреси житла: поштовий індекс, населений пункт, вулиця, номер будинку, квартири), контактний номер телефону, реквізити паспорта громадянина України (серія, номер, ким і коли виданий), реєстраційний номер облікової картки платника податків (ідентифікаційний номер).
+
+4. У Заяві необхідно підкреслити, на які види послуг призначати субсидію:
+
+на оплату житлово-комунальних послуг;
+на придбання твердого палива та скрапленого газу (у разі коли житлове приміщення не забезпечуєтьсяелектро-, тепло- або газопостачанням для опалення).
+Якщо домогосподарство користується твердим паливом, скрапленим газом та комунальними послугами, необхідно підкреслити все.
+
+5. У Заяві необхідно вказати відомості про житлово-комунальні послуги, якими користується сім’я, зокрема:
+
+у графі "Номер особового рахунку" – номер особового рахунку, який міститься у договорі про надання послуг, платіжному документі (квитанції, розрахунковій книжці) на оплату відповідної послуги;
+у графі "Найменування організації, що надає послуги" – назву організації, що міститься у договорі про надання послуг, платіжному документі (квитанції, розрахунковій книжці) на оплату відповідної послуги;
+у графі "Примітки" зазначається наявність або відсутність засобів обліку, а саме: "є лічильник" або "немає лічильника".
+6. У Заяві необхідно відмітити чи розглядати питання призначення субсидії комісією, створеною місцевими органами влади, що здійснюється на підставі обстеження умов проживання сім’ї.
+
+Рішення про призначення субсидії комісією приймається у таких випадках:
+
+на збільшену понад норму площу житла непрацездатним особам;
+у складі сім’ї є особи які зареєстровані але не проживають у житловому приміщенні;
+за фактичним місцем проживання особі, яка орендує житло на підставі договору оренди;
+зареєстровані у житловому приміщенні особи сплачують за житлово-комунальні послуги на розділені особові рахунки;
+сім’я протягом 12 місяців перед зверненням здійснила одноразову покупку або оплатила послуги на суму, яка на час купівлі (оплати) перевищує 50 тис гривень.
+7. Відомості, зазначені у Заяві, засвідчуються підписом особи, а також зазначається дата заповнення Заяви.
+
+Звертаємо увагу, що для громадян, які вже одержують субсидію, додатково надавати документи для її призначення не потрібно.
+</div>
+</div>
+</div>
+
+<div class="panel panel-default">
+<div class=panel-heading>
+<h4 class=panel-title>
+<a data-toggle=collapse data-parent=#accordion href=#collapse4>
+<h3><span class="glyphicon glyphicon-list-alt"></span> Як заповнити декларацію</h3></a>
+</h4>
+</div>
+<div id=collapse4 class="panel-collapse collapse">
+<div class=panel-body>
+<div class="panel panel-info">
+<div class=panel-heading>
+ІНСТРУКЦІЯ ПРО ПОРЯДОК ЗАПОВНЕННЯ БЛАНКУ ДЕКЛАРАЦІЇ ПРО ДОХОДИ І ВИТРАТИ ОСІБ,ЯКІ ЗВЕРНУЛИСЯ ЗА ПРИЗНАЧЕННЯМ ЖИТЛОВОЇ СУБСИДІЇ</div>
+</div>
+Декларацію заповнює особа за місцем реєстрації (або особа, яка орендує житло і фактично сплачує вартість одержуваних послуг.
+
+У правому верхньому куті зазначається назва місцевого управління соціального захисту населення до якого подається Декларація.
+
+У розділі І:
+
+У позиції 1 вказуються прізвище, ім’я по батькові особи, яка звертається.
+
+У позиції 2 необхідно зазначити загальну та опалювальну площу житлового приміщення (кв. метрів), кількість поверхів у будинку, а також підкреслити тип будинку: індивідуальний чи багатоквартирний.
+
+У позиції 3 вказуються відомості про всіх осіб, зареєстрованих у житловому приміщенні (або фактично проживаючих – для осіб, які орендують житло і вказані у договорі оренди, або для індивідуальних забудовників, будинки яких не прийняті в експлуатацію), яким нараховується плата за житлово-комунальні послуги із зазначеннямпрізвища, ім’я по батькові, дати народження, серії та номера паспорта, ідентифікаційного номера (за наявності) таких осіб. У графі „Примітки” можливо зазначити, що конкретна особа не проживає і їй не нараховується плата за житлово-комунальні послуги.
+
+У розділі ІІ:
+
+заповнюються відомості про всі види доходів (заробітна плата, пенсія, допомога, стипендія, грошове забезпечення, аліменти, виплати відповідно до умов цивільно-правового договору, доходи від підприємницької діяльності, здачі майна в оренду, від продажу майна та немайнових прав, сільськогосподарської продукції тощо) осіб, зареєстрованих у житловому приміщенні (або фактично проживаючих, зазначених у договорі оренди), за попередній календарний рік.
+
+Звертаємо увагу, що у Декларації непотрібно вказувати розмір доходу, а зазначається лише вид доходу та найменування організації, де отримано такий дохід, а для фізичних осіб-підприємців – група платника єдиного податку.
+
+У розділі ІІІ:
+
+вказується інформація про осіб, які здійснили одноразову купівлю майна або оплату послуг протягом 12 місяців перед зверненням за призначенням субсидії на суму, яка на час купівлі (оплати) перевищує 50 тисяч гривень із зазначенням виду, вартості, дати здійснення купівлі (оплати) майна або послуг.
+
+Відомості, зазначені у Декларації, засвідчуються підписом особи, а також зазначається дата заповнення Декларації.
+</div>
+</div>
+</div>
+
+<div class="panel panel-default">
+<div class=panel-heading>
+<h4 class=panel-title>
+<a data-toggle=collapse data-parent=#accordion href=#collapse5>
+<h3><span class="glyphicon glyphicon-bullhorn"></span> Міфи про субсидію</h3></a>
+</h4>
+</div>
+<div id=collapse5 class="panel-collapse collapse">
+<div class=panel-body>
+<div class="panel panel-info">
+<div class=panel-heading>Міф 1. Кажуть, що субсидію доведеться повертати, а її оформлення може перешкодити продажу квартири, будинку чи оформленню спадку!?</div>
+</div>
+Насправді субсидія є безповоротною державною допомогою, а її отримання НЕ пов'язане і НЕ тягне за собою зміни власника житла.
+<div class="panel panel-info">
+<div class=panel-heading>Міф 2. Кажуть, що необхідно використовувати в повному обсязі газ, воду та інші комунальні послуги, на які призначено житлову субсидію, інакше її перестануть надавати!?</div>
+</div>
+Насправді якщо люди не використали всю норму ресурсів на сім'ю, заощаджені кошти субсидії залишаються на рахунках сім'ї в межах опалювального періоду і можуть бути використані в подальші місяці, в тому числі і для погашення обов'язкової частки платежу.
+<div class="panel panel-info">
+<div class=panel-heading>Міф 3. Кажуть, що клопоту з оформленням субсидії багато, а в реальності вона може скласти мізерну суму!?</div>
+</div>
+Насправді субсидію оформити просто: треба лише заповнити Заяву і Декларацію. Все решта зроблять органи соціального захисту. Подати заявку тепер можна і в електронному вигляді.
+Субсидія розраховуються на основі середньомісячного сукупного доходу сім'ї і у середньому вона складає 1500- 2000 гривень.
+<div class="panel panel-info">
+<div class=panel-heading>Міф 4. Кажуть, що субсидії не надаються безробітним працездатним громадянам або сім'ям, до складу яких входять такі особи!?</div>
+</div>
+Насправді якщо здорові молоді люди працездатного віку не навчаються, не перебувають на військовій службі, не працюють і  не декларують доходів, але на якісь же кошти живуть,  то для розрахунку субсидії їм буде враховано умовний дохід в розмірі двох прожиткових мінімумів для працездатної особи - з 1 травня 2016 року 2900 грн. І субсидія їм буде призначена.
+<div class="panel panel-info">
+<div class=panel-heading>Міф 5. Кажуть, що субсидії не призначаються за наявності заборгованості за оплату комунальних послуг!?</div>
+</div>
+Насправді заборгованість з оплати за житлово-комунальні послуги НЕ впливає на оформлення субсидії. І ніхто не буде позбавляти українців власності через несплату комунальних тарифів.
+<div class="panel panel-info">
+<div class=panel-heading>Міф 6. Кажуть, що за помилки при заповненні Декларацій будуть штрафувати або навіть забирати субсидії!?</div>
+</div>
+Насправді жодних штрафів за помилки в Деклараціях НЕ буде. Важливо не приховувати інформацію про свої доходи.
+<div class="panel panel-info">
+<div class=panel-heading>Міф 7. Кажуть, що  громадяни можуть втратити субсидію, якщо будуть купувати валюту!?</div>
+</div>
+Насправді субсидія не призначається, якщо будь-хто з членів домогосподарства протягом 12 місяців перед зверненням про призначення субсидії здійснив одноразову купівлю товарів робіт та послуг на суму, яка на дату купівлі перевищує 50 тисяч гривень. Купівля валюти НЕ входить в перелік вартісних покупок, здійснення яких позбавляє права на субсидію.
+<div class="panel panel-info">
+<div class=panel-heading>Міф 8. Кажуть, що субсидій позбавляють ті сім'ї, які мають депозити!?</div>
+</div>
+Насправді депозити в банках НЕ враховуються як доходи і не входять в перелік критеріїв, на підставі яких може бути відмовлено в наданні субсидії.
+<div class="panel panel-info">
+<div class=panel-heading>Міф 9. Кажуть, що субсидія не призначається батькам пенсіонерам, в помешканні яких зареєстровані повнолітні діти, які проживають в іншому місці!?</div>
+</div>
+Насправді рішення комісії приймається з урахуванням документу, що підтверджує тимчасову відсутність осіб з числа зареєстрованих. За відсутності документа – на підставі акту обстеження матеріально-побутових умов проживання сім'ї.
+<div class="panel panel-info">
+<div class=panel-heading>Міф 10. Кажуть, що сім’я не може претендувати на субсидію, якщо у будь-кого з членів родини у власності є земельний пай!?</div>
+</div>
+Насправді наявність будь-якого майна, в тому числі квартири, машини, трактора, корови, земельних паїв, НЕ впливає на право отримання субсидії. Під час розрахунку  субсидії враховується дохід, що його приносить це майно. Якщо пай не здають в оренду, то й доходу немає.
+</div>
+</div>
+</div>
+
 </div>
 <div class="well well-sm"><b>Види житлової субсидії</b></div>
 Житлова субсидія надається у вигляді безповоротної державної допомоги, а саме (відповідно до пункту1 Положення про порядок призначення та надання населенню субсидій для відшкодування витрат на оплату житлово-комунальних послуг, придбання скрапленого газу, твердого та рідкого пічного побутового палива (далі: Порядок призначення субсидій)):
