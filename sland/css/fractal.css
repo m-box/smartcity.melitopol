@@ -33,6 +33,36 @@
     background-color: green;
     color: white;
 }
+#scrollit {
+  position:relative;
+  height:218px;
+  width:450px;  
+  margin:0 auto;
+}
+#scrollit img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 0.7s ease-in-out;
+  -moz-transition: opacity 0.7s ease-in-out;
+  -o-transition: opacity 0.7s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
+}
+#scrollit img.top:hover {
+  opacity:0;
+}
+#scrollit a:link, a:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+#scrollit a:hover, a:active {
+    background-color: green;
+    color: white;
+}
 .opacity:hover figcaption {
 	opacity: 0.8;
 }

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="Сайт електроних сервісів міста Мелітополь. Кабінет самообслуговування, контаку з адміністрацією та мерією міста">
+<meta name=keywords content="SmartCity.Melitopol, SM, SmartCity, Melitopol">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name=author content="Сажнєв Михайло / 100000718680383, Вячеслав Рєдькін / 100012765812627, Станіслав Деріпаско / 100012813070004">
+<title >Субсидії. SmartCity.Melitopol</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NKKP3D');</script>
+<!-- End Google Tag Manager -->
+<link href=css/bootstrap.min.css rel=stylesheet>
+<link href=css/fractal.css rel=stylesheet>
+<script src=js/jquery.min.js></script>
+<script src=js/bootstrap.min.js></script>
+<script src=js/sobes.js></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<!--стиль landing-сторінки-->
+  <style>
+  body {
+      position: relative;
+  }
+  #service0 {padding-top:50px; color: #fff; background-color: #ffffff;}
+  #service1 {padding-top:50px; color: #000; background-color: #ffffff;}
+  #service2 {padding-top:50px; color: #000; background-color: #ffffff;}  
+  #service3 {padding-top:50px; color: #000; background-color: #ffffff;}	
+  #service4 {padding-top:50px; color: #000; background-color: #ffffff;}
+  #service5 {padding-top:50px; color: #000; background-color: #ffffff;}
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKKP3D"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <header>
+  </header>
+<!--Навігаційна панель заголовку та форма пошуку-->
+<nav class="navbar navbar-inverse navbar-fixed-top" style="min-height: 60px;">
+  <div class="container-fluid noprint">
+    <div class="navbar-header"> 
+	  <a class="navbar-brand top" href="#"><img src="img/logo.png" height=30px style="margin: 15px 0px 0px 0px ;"></img></a>
+      <a class="navbar-brand" style="line-height: 60px;" href="#"><b>Субсидії мелітопольцям</b></a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="#service2" style="line-height: 60px;"><b>Дізнатись Ваш розмір субсидії</b></a></li>
+          <li><a href="#service3" style="line-height: 60px;"><b>Калькулятор субсидій</b></a></li>
+          <li><a href="#service4" style="line-height: 60px;"><b>Часті питання</b></a></li>
+          <li><a href="#service5" style="line-height: 60px;"><b>Оформлення субсидій</b></a></li>          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!--modal запиту_start-->
+<div class="container">
+<div class="modal fade" id=Modalsobes role=dialog>
+<div class="modal-dialog modal-lg">
+<div class=modal-content>
+<div class=modal-header>
+<button type=button class="close noprint" data-dismiss=modal  onClick="refreshPage()">&times;</button>
+<div class="row">
+<div class="col-sm-2">
+<center><img src="images/200px-Melitopol_COA.png" height=80px></img></center>
+</div>
+<div class="col-sm-8">
+<center><strong><b>УПРАВЛІННЯ СОЦІАЛЬНОГО ЗАХИСТУ<br>
+МЕЛІТОПОЛЬСЬКОЇ МІСЬКОЇ РАДИ<br>
+ІНФОРМАЦІЯ ПРО ПРИЗНАЧЕННЯ СУБСИДІЇ<br></b></strong></center>
+</div>
+</div>
+</div>
+<div class=modal-body id=sub_info style="font-size:10px"></div>
+<div class="modal-footer noprint">
+<button type=submit class="btn btn-info" data-dismiss=modal onclick=printme()>Друк</button>
+<button type=submit class="btn btn-primary" data-dismiss=modal onClick="refreshPage()">Закрити</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--modal запиту_end-->
+<div id="service0" class="container-fluid noprint">
+<!--карусель-->  
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>    
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="images/back.jpg"  style="height: 100vh; width: 100%;" alt="Площа перемоги">
+      <div class="container" style="position: absolute; top: 35%; left: 20%; width: 100%; height: 100%;">      
+      <h1 style="text-shadow: 3px 3px 5px black, 0 0 20px black, 0 0 5px blue; ">СУБСИДІЯ ГАРАНТОВАНА ДЕРЖАВОЮ</h1>
+      <h3 style="text-shadow: 1px 1px 2px black, 0 0 15px black, 0 0 5px blue; ">Дізнайтесь про суму призначеної субсидії</h3><br><a href="#service2"><button type="button" class="btn btn-info" href="#service2"><b>Детальніше </b><span class="glyphicon glyphicon-share-alt"></span></button></a>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/back2.jpg" style="height: 100vh; width: 100%;" alt="Пам'ятник Тарасу Шевченко">
+      <div class="container" style="position: absolute; top: 35%; left: 20%; width: 100%; height: 100%;">
+      <h1 style="text-shadow: 3px 3px 5px black, 0 0 20px black, 0 0 5px blue; ">СУБСИДІЯ ЦЕ ЕКОНОМІЯ СІМЕЙНОГО БЮДЖЕТУ</h1>
+      <h3 style="text-shadow: 1px 1px 2px black, 0 0 15px black, 0 0 5px blue; ">Дізнайтесь як оформити субсидію</h3><br><a href="#service3"><button type="button" class="btn btn-info" style="text-shadow: 0 0 20px black">
+      <b>Детальніше </b><span class="glyphicon glyphicon-share-alt"></span></button></a>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/back3.jpg" style="height: 100vh; width: 100%;" alt="Колесо огляду">
+      <div class="container" style="position: absolute; top: 35%; left: 20%; width: 100%; height: 100%;">
+      <h1 style="text-shadow: 3px 3px 5px black, 0 0 20px black, 0 0 5px blue; ">СУБСИДІЯ ДОСТУПНА КОЖНОМУ</h1>
+      <h3 style="text-shadow: 1px 1px 2px black, 0 0 15px black, 0 0 5px blue; ">Спростування мифів про субсидію</h3><br><a href="#service4"><button type="button" class="btn btn-info" style="text-shadow: 3px 3px 5px black, 0 0 20px black, 0 0 5px blue; "><b>Детальніше </b><span class="glyphicon glyphicon-share-alt"></span></button></a>
+      </div>
+    </div>
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  </div>
+</div>
+<!--карусель_end-->
+<!--основний контент-->
+<div id="service1" class="container-fluid noprint">
+<div class="container">
+<div class=row>
+<div class=col-sm-6>
+<div class="media">
+  <div class="media-left media-middle">
+    <a href="#service2" style="text-decoration: none;"><img src="images/1.png" class="media-object" style="width: 80px"></a>
+  </div>
+  <div class="media-body">
+    <a href="#service2" style="text-decoration: none;">
+    <h5 class="media-heading"><b style="color: blue;">ЗАПИТ СТАТУСУ СУБСИДІЇ</b></h5>
+    <b>Дізнайтеся про суму призначеної субсидії</b></a>
+  </div>
+</div>
+</div>
+<div class=col-sm-6>
+<div class="media">
+  <div class="media-left media-middle">
+    <a href="http://teplo.gov.ua/subsidies/2" style="text-decoration: none; color: #000000;"><img src="images/2.png" class="media-object" alt="" style="width:80px ;"></a>
+  </div>
+  <div class="media-body">
+    <a href="http://teplo.gov.ua/subsidies/2" style="text-decoration: none;">
+    <h5 class="media-heading"><b style="color: blue;">ЯК ЗАПОВНИТИ ЗАЯВУ НА СУБСИДІЮ</b></h5>
+    <p><b>Як правильно заповнити заяву?</b></p></a>
+  </div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class=col-sm-6>  
+<div class="media">
+  <div class="media-left media-middle">
+    <a href="http://teplo.gov.ua/subsidies/1" style="text-decoration: none; color: #000000;"><img src="images/3.png"  class="media-object" alt="" style="width: 80px;"></a>
+  </div>
+  <div class="media-body">
+    <a href="http://teplo.gov.ua/subsidies/1" style="text-decoration: none;">
+    <h5 class="media-heading"><b style="color: blue;">СУБСИДІЯ - ЦЕ ПРОСТО</b></h5>
+    <p><b>Дізнайтеся як оформити субсидію</b></p></a>
+  </div>
+</div>
+</div>
+<div class=col-sm-6>      
+<div class="media">
+  <div class="media-left media-middle">
+    <a href="http://teplo.gov.ua/subsidies/3" style="text-decoration: none; color: #000000;"><img src="images/4.png" alt="" class="media-object" style="width:80px"></a>
+  </div>
+  <div class="media-body">
+    <a href="http://teplo.gov.ua/subsidies/3" style="text-decoration: none;"><h5 class="media-heading"><b style="color: blue;">ЯК ЗАПОВНИТИ ДЕКЛАРАЦІЮ</b></h5>
+    <p><b>Як правильно заповнити декларацію?</b></p></a>
+  </div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class=col-sm-6>
+<div class="media">
+  <div class="media-left media-middle">
+    <a href="http://teplo.gov.ua/subsidies/6" style="text-decoration: none; color: #000000;"><img src="images/7.png" alt="" class="media-object" style="width:80px"></a>
+  </div>
+  <div class="media-body">
+    <a href="http://teplo.gov.ua/subsidies/6" style="text-decoration: none;"><h5 class="media-heading"><b style="color: blue;">СУБСИДІЯ - ДОСТУПНА КОЖНОМУ</b></h5>
+    <p><b>Спростування міфів про субсидію</b></p></a>
+  </div>
+</div>
+</div>
+<div class=col-sm-6>
+<div class="media">
+  <div class="media-left media-middle">
+    <a href="https://subsidii.mlsp.gov.ua/" style="text-decoration: none; color: #000000;"><img src="images/6.png" alt="" class="media-object" style="width:80px"></a>
+  </div>
+  <div class="media-body">
+    <a href="https://subsidii.mlsp.gov.ua/" style="text-decoration: none;"><h5 class="media-heading"><b style="color: blue;">ОФОРМЛЕННЯ СУБСИДІЇ ОНЛАЙН</b></h5>
+    <p><b>Покрокова інструкція</b></p></a>
+  </div>
+</div>
+</div>
+</div>
+<div class=row>
+<div class=col-sm-6>
+  <div class="media">
+  <div class="media-left media-middle">
+    <a href="#service3" style="text-decoration: none; color: #000000;"><img src="images/5.png" alt="" class="media-object" style="width:80px"></a>
+  </div>
+  <div class="media-body">
+    <a href="#service3" style="text-decoration: none;"><h5 class="media-heading"><b style="color: blue;">КАЛЬКУЛЯТОР СУБСИДІЇ</b></h5>
+    <p><b>Орієнтовний розрахунок розміру субсидій</b></p></a>
+  </div>
+</div>
+</div>
+<div class=col-sm-6>
+<div class="media">
+  <div class="media-left media-middle">
+    <a href="#service4" style="text-decoration: none; color: #000000;"><img src="images/8.png" alt="" class="media-object" style="width:80px"></a>
+  </div>
+  <div class="media-body">
+    <a href="#service4" style="text-decoration: none;"><h5 class="media-heading"><b style="color: blue;">ЯК РОЗРАХОВУЄТЬСЯ РОЗМІР СУБСИДІЇ?</b></h5>
+    <p><b>Нормативи при розрахунку субсидії?</b></p></a>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  <div class="container noprint">
+<!--соціальний ролік-->
+<!-- 16:9 aspect ratio -->
+<br><div class="container embed-responsive embed-responsive-16by9 noprint"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2YX1p1fyeb8" frameborder="0" allowfullscreen></iframe></div>  
+    <div class="row">    
+      <div class="col-sm-6">
+      <img alt="Гаряча лінія" src="images/15-45.jpg" style="width:100%"></img>
+      </div>
+      <div class="col-sm-6 pull-right">
+      <img alt="Ніяких серих схем" src="images/1_shema3.gif" style="width:100%"></img>
+      </div>
+    </div>
+  </div>
+<div id="service2" class="container-fluid noprint">
+<!--модуль запиту субсидій_start-->
+<div class="container" style=opacity:0.9;>
+<div class="panel panel-default">
+<div class=panel-heading style="background-color: #ffffff;">
+<h4 class=panel-title>
+<img src="images/1.png" alt="" style="float: left;"></img><h2>Запит статусу субсидій</h2><br>
+</h4>
+</div>
+<div class=panel-body>
+<div class=panel-heading><h4>Введіть номер особистого рахунку від водоканалу</h4></div>
+<div class=input-group></span><input type=text id="os_rah" class=form-control value="" placeholder=12345></div><text style=color:red; id="os_rah_err"></text><br>
+<div class=panel-heading><h4>Введіть Ваше прізвище українською мовою згідно паспорту громадянина України</h4></div>
+<div class=input-group><input type=text class=form-control id="surname_ukr" value="" placeholder=Сидоренко></div><br>
+<div class=panel-heading><h4>Введіть Ваше прізвище російською мовою<a href=#note style=color:red>*</a></h4></div>
+<div class=input-group><input type=text class=form-control id="surname_rus"  value="" placeholder=Сидоренко></div><br>
+<div class="g-recaptcha" data-sitekey="6LeRJgcUAAAAAHsRf4qu1UCygwxaVW8jC6Lx4vmR"></div><text style="color:red;"  id="captcha_err"></text><br>
+<button class="btn btn-primary btn-lg" onClick="sub_info()"> Запит</button>
+<h5 id=note style=color:red>*запит прізвища російською мовою діє тимчасово, у звя’зку з особливістю бази даних Мінсоцполітики міста.</h5>
+</div>
+</div>
+</div>
+<!--модуль запиту субсидій_end-->
+</div>
+<div id="service3" class="container-fluid noprint">
+<!--калькулятор_start-->
+<div class="container"  style="background-color: #ffffff; opacity: 0.9;">
+<div class=panel-body>
+<img src="images/5.png" alt="" style="float: left;"></img><h2>Калькулятор субсидій</h2>
+<br>
+<b><h3>Кількість <i>зареєстрованих</i> осіб у квартирі (будинку): </h3></b>
+<input class=form-control id=kilk_1 type=text style=width:120px value>
+<b><h3>Cукупний щомісячний дохід всіх зареєстрованих осіб: </h3></b>
+<br>
+<style>input{-webkit-appearance:textfield;-moz-appearance:textfield;-o-appearance:textfield;appearance:textfield}input::-webkit-inner-spin-button{display:none}0</style>
+<div class=row>
+<div class="col-xs-1 text-center" style=min-width:70px>Січень, 2015
+<input class=form-control id=dohid1 style=min-width:60px type=number min=1 value>
+</div>
+<div class="col-xs-1 text-center" style=min-width:70px>Лютий, 2015
+<input class=form-control id=dohid2 style=min-width:60px type=number min=1 value>
+</div>
+<div class="col-xs-1 text-center" style=min-width:70px>Березень, 2015
+<input class=form-control id=dohid3 style=min-width:60px type=number min=1 value>
+</div>
+<div class="col-xs-1 text-center" style=min-width:70px >Квітень, 2015
+<input class=form-control id=dohid4 style=min-width:60px type=number min=1 value>
+</div>
+<div class="col-xs-1 text-center" style=min-width:70px >Травень, 2015
+<input class=form-control id=dohid5 style=min-width:60px type=number min=1 value>
+</div>
+<div class="col-xs-1 text-center" style=min-width:70px >Червень, 2015
+<input class=form-control id=dohid6 style=min-width:60px type=number min=1 value>
+</div>
+<div class="col-xs-1 text-center" style=min-width:70px >Липень, 2015
+<input class=form-control id=dohid7 style=min-width:60px type=number min=1 value>
+</div>
+<div class="col-xs-1 text-center" style=min-width:70px >Серпень, 2015
+<input class=form-control id=dohid8 style=min-width:60px type=number min=1 value>
+</div>
+<div class="col-xs-1 text-center" style=min-width:70px >Вересень, 2015
+<input class=form-control id=dohid9 style=min-width:60px type=number min=1 value>
+</div>
+<div class="col-xs-1 text-center" style=min-width:70px >Жовтень, 2015
+<input class=form-control id=dohid10 style=min-width:60px type=number min=1 value>
+</div>
+<div class="col-xs-1 text-center" style=min-width:70px >Листопад, 2015
+<input class=form-control id=dohid11 style=min-width:60px type=number min=1 value>
+</div>
+<div class="col-xs-1 text-center" style=min-width:70px >Грудень, 2015
+<input class=form-control id=dohid12 style=min-width:60px type=number min=1 value><br>
+</div>
+</div>
+<b><h3>Площа приміщення: </h3></b>
+<input class=form-control id=area type=number min=1 style=width:120px value>
+<b><h3>Розмір середньомісячної плати за житлово-комунальні послуги</h3></b>
+<br>
+<div class=row>
+<div class="col-xs-6 text-center">
+<input class=form-control id=paltazacomun type=number min=1 style=width:120px value>
+</div>
+<div class="col-xs-6 text-center">
+<div class="alert alert-success">
+<strong id="result">Заповніть комірки</strong>
+</div>
+</div>
+<button type=button class="btn btn-lg btn-success pull-right" onclick=calcsobes()>Розрахувати</button>
+</div>
+</div>
+</div>
+<!--калькулятор_end-->
+</div>
+<div id="service4" class="container-fluid noprint">
+<!--ЧаПи_start-->
+<div class="container"  style="background-color: #ffffff;">
+<img src="images/7.png" alt="" style="float: left;"></img><h2></span>Часті Питання</h2><br>
+<div class="well well-sm"><b>Що таке житлова субсидія?</b></div>
+Житлова субсидія надається у вигляді безповоротної державної допомоги, а саме (відповідно до пункту1 Положення про порядок призначення та надання населенню субсидій для відшкодування витрат на оплату житлово-комунальних послуг, придбання скрапленого газу, твердого та рідкого пічного побутового палива (далі: Порядок призначення субсидій)):
+<ul>
+<li>безготівкова щомісячна субсидія на оплату частини вартості житлово-комунальних послуг;
+<li>субсидія на скраплений газ, тверде та рідке пічне побутове паливо, яка призначається та виплачується громадянам готівкою один раз в календарному році.
+</ul>
+<div class="well well-sm"><b>Хто має право на житлову субсидію?</b></div>
+Отримати житлову субсидію мають право громадяни, які проживають у житлових приміщеннях (будинках) (далі – житлові приміщення) будь-якої форми власності (відповідно до пункту 2 Порядку призначення субсидій).
+Субсидія призначається одному з членів домогосподарства, на якого відкрито особовий рахунок (домогосподарство - сукупність осіб (або одна особа), які зареєстровані в житловому приміщенні та які враховуються при наданні житлової субсидії) або одній із зареєстрованих у приміщенні осіб незалежно від того, чи відкриті на неї особові рахунки чи ні.
+У разі смерті особи, на яку відкрито особовий рахунок, надання субсидії не припиняється за умови, що у житловому приміщенні зареєстровані інші особи, яким нараховується плата за житлово-комунальні послуги.
+Якщо у житлових приміщеннях зареєстровані неповнолітні діти, які залишились без батьківської опіки (піклування), субсидія призначається за заявою опікуна (піклувальника) і розраховується виходячи з розміру пенсії у зв'язку з втратою годувальника та інших соціальних виплат, які отримує опікун (піклувальник) на підопічних дітей.
+Субсидія не призначається, якщо неповнолітні діти, маючи батьків, зареєстровані в житловому приміщенні (будинку) самі (Відповідно до пункту 6 Порядку призначення субсидій).
+<div class="well well-sm"><b>Яким має бути розмір субсидії?</b></div>
+Субсидії призначаються, якщо плата за житлово-комунальні послуги, скраплений газ, тверде та рідке пічне побутове паливо за встановленими соціальними нормами споживання (з урахуванням пільг) перевищує обсяг обов’язкового відсотка платежу (відповідно до пункту 4 Порядку призначення субсидій).
+<div class="well well-sm"><b>У мене є опасіння що субсидію доведеться повертати.</b></div>
+Субсидія є безповоротною державною допомогою. Поверненю не підлягає.
+<div class="well well-sm"><b>Субсидію необхідно використовувати в повному обсязі газ, воду та інші комунальні послуги, на які призначено житлову субсидію, інакше її перестануть надавати?</b></div>
+Субсидія призначається в межах соціальних норм житла і нормативів використання житлово-комунальних послуг. Її розмір не залежить від фактичного споживання. Якщо сім’я споживає газу, води, електроенергії більше норми, субсидія їй буде призначена. Проте всі витрати на спожиті послуги понад нормативи вона повинна заплатити самостійно і в повному обсязі.
+<div class="well well-sm"><b>Здається що оформити субсидію досить важжко, а у реальності сума виплат може скласти мізерну суму, деяким взагалі відмовлять – не дивлячись на низький дохід.</b></div>
+Субсидія розраховуються на основі середньомісячного сукупного доходу сім'ї. І її сума може змінюватись в досить широких рамках. Вона залежатиме від смурного доходу родини, площі приміщення, кількості людей що проживають в домогосподарстві, від вартості комунальних послуг тощо. В цілому можна сказати що плата за комунальні послуги не складе більш ніж 20% сукупного доходу. Підрахувати на яку суму Ви можете претендувати можна за допомогою <a href="#service3">калькулятора субсидій</a>.
+<div class="well well-sm"><b>Субсидії не надаються безробітним?</b></div>
+З травня 2016 року, якщо такі громадяни не мають доходів, для розрахунку субсидії їм буде враховано умовний дохід у розмірі двох прожиткових мінімумів для працездатних осіб.
+<div class="well well-sm"><b>Чи надаються субсидії за наявності заборгованості з оплати житлово-комунальних послуг,</b></div>
+Заборгованість з оплати за житлово-комунальні послуги не впливає на оформлення субсидії. Але слід пам’ятати, що одержувач субсидії має щомісячно сплачувати свою обов’язкову частку плати за житлово-комунальні послуги, яка визначена в повідомленні про призначення субсидії.
+<div class="well well-sm"><b>За помилки при заповненні Декларацій будуть штрафувати чи навіть позбавляти субсидії.</b></div>
+Форма Декларації про доходи і витрати значно спрощена, заповнити її нескладно. З 21 липня 2015 року в Декларацію не потрібно вносити суми доходів, лише їх види і джерела отримання, штрафів за помилки в деклараціях не буде. Втім слід пам'ятати що навмисне переховування джерел прибутку, чи одноразові витрати домогосподарства на суму в 50 000 грн чи більше, є причиною для перегляду суми субсидії чи навіть її скасування.
+<div class="well well-sm"><b>При оформленні субсидії необхідно вказувати відсотки від депозиту як один з видів доходу. Субсидію доведеться повертати тим, у кого є депозити в банках, якщо вони перевищують певну суму.</b></div>
+До сукупного доходу не враховуються доходи від розміщення депозитів. Наш спільний добробут залежить від стабільності фінансової системи, тому ми всі як і держава в цілому, зацікавлені в легальному розміщенні коштів на банківських депозитах.
+</div>
+<!--ЧаПи_end-->
+</div>
+<div id="service5" class="container-fluid noprint">
+<!--Онлайн_форма_start-->
+<div class="container">
+<img src="images/6.png" alt="" style="float: left;"></img><h2>Оформлення субсидій</h2><br>
+<div class="alert alert-warning"><b>Куди звертатись за призначенням субсидії?</b></div>
+Житлові субсидії призначаються структурними підрозділами з питань соціального захисту населення.
+Жителі сільської місцевості можуть передати заяви з необхідними для призначення субсидій документами через уповноважених осіб, які визначаються виконавчими органами сільських і селищних рад (відповідно до пункту 3 Порядку призначення субсидій).
+Жителі міста Мелітополя можуть звертатись для оримання субсидій за наступними адресами:
+<ol>
+<li><a href="https://www.google.com.ua/maps/place/46%C2%B049'39.8%22N+35%C2%B021'29.6%22E/@46.827734,35.3560263,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d46.827734!4d35.358215" style="text-decoration: none;">просп. Б. Хмельницького, 87, тел. 42-83-27;</a>
+<li><a href="https://www.google.com.ua/maps/place/46%C2%B050'37.3%22N+35%C2%B021'50.9%22E/@46.843706,35.3619603,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d46.843706!4d35.364149" style="text-decoration: none;">вул. Гетьманська, 137, тел. 42-40-60;</a>
+<li><a href="https://www.google.com.ua/maps/place/46%C2%B051'47.4%22N+35%C2%B022'53.9%22E/@46.863158,35.3805387,18z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d46.863158!4d35.381633" style="text-decoration: none;">просп. 50-річчя Перемоги, 36/1, тел. 5-37-78;</a>
+<li><a href="https://www.google.com.ua/maps/place/46%C2%B051'35.8%22N+35%C2%B020'25.0%22E/@46.859948,35.3397288,19z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d46.859948!4d35.340276" style="text-decoration: none;">вул. Гагаріна, 1, тел. 7-22-22.</a>
+</ol>
+Можна відправити документи поштою на адресу: м. Мелітополь, просп. Б. Хмельницького, буд. 68-А.<br>
+Також можна <a href="https://subsidii.mlsp.gov.ua/" style="text-decoration: none;">подати субсидію в електронній формі.</a>
+</div>
+<!--Онлайн_форма_end-->
+</div>
+<!--alien totop button_start-->
+<script type="text/javascript" src="js/totop.js"></script>
+<noscript><a href="#top"><img class="noprint" src="images/up_arrow.png" alt="наверх" width="20px"></img></a></noscript>
+<!--alien totop button_start-->
+<footer>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid noprint">
+    <div class="navbar-header"> 
+	  <a class="navbar-brand top" href="#"><img src="img/logo.png" height=20px></img></a>
+      <a class="navbar-brand" href="#">SmartCity.Melitopol</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav pull-right">          
+          <li><a href="#service2">Дізнатись Ваш розмір субсидії</a></li>
+          <li><a href="#service3">Калькулятор субсидій</a></li>
+          <li><a href="#service4">Часті питання</a></li>
+          <li><a href="#service5">Оформлення субсидій</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+</footer>
+<script>function printme(){window.print()};</script>
+<script>function refreshPage(){location.reload();}</script>
+<style>input{-webkit-appearance:textfield;-moz-appearance:textfield;-o-appearance:textfield;appearance:textfield}input::-webkit-inner-spin-button{display:none}</style>
+<style type=text/css>@media print{.noprint{display:none}}@media screen{...}></style>
+</body>
+</html>

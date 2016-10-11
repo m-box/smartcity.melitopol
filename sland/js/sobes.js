@@ -21,7 +21,7 @@ else
 				method: "get_if",
 				data: [
 							["OS_RAH_ORG1","=",os_rah],
-							["NAME","=", surname_ukr]							
+							["NAME","=", surname_ukr]						
 					  ]	}
 	var requery=JSON.stringify(data);
  	if (os_rah ==""){  
@@ -74,14 +74,15 @@ else
 												if (query.data!="error")
 												{
 												  var table = $('<table/>',{class:"table table-boarded", style:"font-size:10px"})
-												  $(table, 'thead').append('<tr style="fontsize:small"><th>Організація</th><th>Особ.рахунок</th><th colspan=2>Соц. норма</th><th>Вартість послуг <br>згідно соціальної норми</th><th>Обов’язкова частка</th><th>Сума субсидії</th></tr>');												 
+												  $(table, 'thead').append('<tr style="fontsize:small"><th>Організація</th><th>Особ.рахунок</th><th colspan=2>Соц. норма</th><th>Вартість послуг <br>згідно соціальної норми</th><th>Сума субсидії</th></tr>');												 
 												$.each(query.data,function(){
 												  var sum_subs = (parseInt(this.subs) - parseInt(this.plata))
-												$(table, 'tbody').append('<tr style="fontsize:small"><td>' +this.NAZVA_ORG+ '<br>' +this.posluga+'</td><td>' +this.shet+ '</td><td>' +this.odinica+ '</td><td>' +this.norm_vart+ '</td><td>' +this.subs+ ' грн</td><td>' +this.plata+ ' грн</td><td>'+sum_subs+' грн</td></tr>')
+												$(table, 'tbody').append('<tr style="fontsize:small"><td>' +this.NAZVA_ORG+ '<br>' +this.posluga+'</td><td>' +this.shet+ '</td><td>' +this.odinica+ '</td><td>' +this.norm_vart+ '</td><td>' +this.subs+ ' грн</td><td>'+sum_subs+' грн</td></tr>')
 												})
 												}
 												$('#sub_info').append(table)
 												$('#sub_info').append('У випадку виникнення заборгованості за спожиті житлово-комунальні послуги (за інформацією житлово-комунальних підприємств) надання субсидії може бути припинено.<br>У разі зміни у складі зареєстрованих, їх соціального статусу, купівлі товарів або оплати послуг на суму понад 50 тис. грн., Ви зобов’язані повідомити управління соціального захисту.<br>У разі виникнення запитань щодо призначення субсидії рекомендуємо звернутися до найближчого відділу прийому громадян:<br>№1 – просп. Б. Хмельницького, 87, тел. 42-83-27;<br>№2 – вул. Леніна, 137, тел. 42-40-60;<br>№3 – просп. 50-річчя Перемоги, 36/1, тел. 5-37-78;<br>№4 – вул. Гагаріна, 1, тел. 7-22-22.<br>Детальнішу інформацію про субсидії Ви можете знайти на сайті: www.subsidii.mlt.gov.ua<br>Залишились питання? Телефонуйте на «гарячу» телефонну лінію: 0619 42-83-28<br>')
+												$('#sub_info').append("Ви зобов’язані щомісячно сплачувати вартість фактично використованої послуги з урахуванням розміру призначенної субсидії. Фактичне нарахування - субсидія = ваша оплата " )
 												}
 											})
 									}
@@ -105,14 +106,19 @@ else
 												if (query.data!="error")
 												{
 												  var table = $('<table/>',{class:"table table-boarded", style:"font-size:10px"})
-												  $(table, 'thead').append('<tr style="fontsize:small"><th>Організація</th><th>Особ.рахунок</th><th colspan=2>Соц. норма</th><th>Вартість послуг <br>згідно соціальної норми</th><th>Обов’язкова частка</th><th>Сума субсидії</th></tr>');												 
+												  $(table, 'thead').append('<tr style="fontsize:small"><th>Організація</th><th>Особ.рахунок</th><th colspan=2>Соц. норма</th><th>Вартість послуг <br>згідно соціальної норми</th><th>Сума субсидії</th></tr>');												 
 												$.each(query.data,function(){
-												  var sum_subs = (parseInt(this.subs) - parseInt(this.plata))
-												$(table, 'tbody').append('<tr style="fontsize:small"><td>' +this.NAZVA_ORG+ '<br>' +this.posluga+'</td><td>' +this.shet+ '</td><td>' +this.odinica+ '</td><td>' +this.norm_vart+ '</td><td>' +this.subs+ ' грн</td><td>' +this.plata+ ' грн</td><td>'+sum_subs+' грн</td></tr>')
+												var subs = this.subs
+												var plata = this.plata
+												plata = plata.replace(',','.')
+												subs = subs.replace(',','.')
+												  var sum_subs = (Number(subs) - Number(plata))
+												$(table, 'tbody').append('<tr style="fontsize:small"><td>' +this.NAZVA_ORG+ '<br>' +this.posluga+'</td><td>' +this.shet+ '</td><td>' +this.odinica+ '</td><td>' +this.norm_vart+ '</td><td>' +subs + ' грн</td><td>'+sum_subs.toFixed(2)+' грн</td></tr>')
 												})
 												}
 												$('#sub_info').append(table)
 												$('#sub_info').append('У випадку виникнення заборгованості за спожиті житлово-комунальні послуги (за інформацією житлово-комунальних підприємств) надання субсидії може бути припинено.<br>У разі зміни у складі зареєстрованих, їх соціального статусу, купівлі товарів або оплати послуг на суму понад 50 тис. грн., Ви зобов’язані повідомити управління соціального захисту.<br>У разі виникнення запитань щодо призначення субсидії рекомендуємо звернутися до найближчого відділу прийому громадян:<br>№1 – просп. Б. Хмельницького, 87, тел. 42-83-27;<br>№2 – вул. Леніна, 137, тел. 42-40-60;<br>№3 – просп. 50-річчя Перемоги, 36/1, тел. 5-37-78;<br>№4 – вул. Гагаріна, 1, тел. 7-22-22.<br>Детальнішу інформацію про субсидії Ви можете знайти на сайті: www.subsidii.mlt.gov.ua<br>Залишились питання? Телефонуйте на «гарячу» телефонну лінію: 0619 42-83-28<br>')
+												$('#sub_info').append("Ви зобов’язані щомісячно сплачувати вартість фактично використованої послуги з урахуванням розміру призначенної субсидії. Фактичне нарахування - субсидія = ваша оплата ")
 												}
 											})
 						}
