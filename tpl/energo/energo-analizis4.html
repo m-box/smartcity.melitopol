@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Сайт електроних сервісів міста Мелітополь. Кабінет самообслуговування, контаку з адміністрацією та мерією міста">
+<meta name=keywords content="SmartCity.Melitopol, SM, SmartCity, Melitopol">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name=author content="Сажнєв Михайло / 100000718680383, Вячеслав Рєдькін / 100012765812627, Станіслав Деріпаско / 100012813070004">
+<title >SmartCity.Melitopol. Кабінет електронних сервісів</title>
+<link href=/css/fractal.css rel=stylesheet>
+<link href=/css/bootstrap.min.css rel=stylesheet>
+<script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js></script>
+<script src=/js/log_user.js></script>
+<script type="text/javascript"  src= "/js/JS_req.js"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TB2T2L');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body onLoad="login_if();">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TB2T2L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id=scheader>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<h5 class=pull-right id=hello>Вітаємо, <a href=# data-toggle=modal data-target=#myModal>увійти в особистий кабінет</a>
+</h5>
+<div class="modal fade" id=myModal role=dialog>
+<div class="modal-dialog modal-sm">
+<div class=modal-content>
+<div class=modal-header>
+<button type=button class=close data-dismiss=modal>&times;</button>
+<h3>Увійти в систему</h3><br>
+<text style=color:red; id="err"></text>
+</div>
+<div class=modal-body>
+<form class=form-inline role=form>
+<div class=form-group>
+<label for=usrname><span class="glyphicon glyphicon-user"></span> Введіть логін</label>
+<input type=email class=form-control id=email placeholder=Логін>
+</div><br>
+<div class=form-group>
+<label for=psw><span class="glyphicon glyphicon-eye-open"></span> Введіть пароль</label>
+<input type=password class=form-control id=pwd placeholder=Пароль>
+</div><br>
+<a href=/404>Нагадати пароль</a><br>
+<div class="checkbox pull-right">
+<label><input type=checkbox> Запам'ятати мене</label>
+</div><br>
+</form>
+</div>
+<div class=modal-footer>
+<a class="btn btn-primary" href=/registration>Реєстрація</a>
+<button type=submit class="btn btn-primary" onclick = "login_1();" id = "login_0">Увійти</button>
+</div>
+</div>
+</div>
+</div>
+<a href=/><img src=/img/logo.png alt="Кабінет електроних сервісів: SmartMelitopol" style="float:left;width:80px;height:80px;margin:10px 10px 0 0"/></a>
+<h3><p class=text-primary><b>SmartCity. <br>Кабінет електронних сервісів</b></p></h3>
+</div>
+</div>
+</div>
+</div>
+<div class=container>
+<div class=page-header>
+<ul class="nav nav-pills">
+<li><a href=/concept>Концепція <span class=badge>1</span></a></li>
+<li class=active><a href=/>Проекти <span class=badge>42</span></a></li>
+<li><a href=/news>Новини <span class=badge>0</span></a></li>
+<li><a href=http://www.mlt.gov.ua>Міська влада <span class=badge>1</span></a></li>
+<li><a href=/faq>Допомога </a></li>
+<form class="navbar-form navbar-left pull-right" role=search>
+<div class=form-group>
+<input type=text class=form-control placeholder="Пошук сервісів">
+</div>
+<button type=submit class="btn btn-default">Пошук</button>
+</form>
+</ul>
+</div>
+<div class="alert alert-dismissible alert-success">
+<button type=button class=close data-dismiss=alert>&times;</button>
+<strong>Увага!</strong> Сайт знаходиться в розробці, працює <a href=# class=alert-link>в режимі обмеженого доступу</a>.
+</div>
+<h2><span class="label label-info">Муніципальне майно. Структура витрат</span></h2>
+<a class="btn btn-warning pull-right" href=energosad.html>Адміністрування</a><br>
+
+<link href=/css/datepicker.css rel=stylesheet>
+<script src=/js/bootstrap-datepicker.js></script>
+<script src=/js/dt.js></script>
+<script type=text/javascript src=https://www.gstatic.com/charts/loader.js></script>
+<script type=text/javascript>google.charts.load("current",{packages:["corechart"]});google.charts.setOnLoadCallback(drawChart);function drawChart(){var c=google.visualization.arrayToDataTable([["Ресурс","Вартість витрат"],["Вода",11000],["Газ",2200],["Електрична енергія",2211],["Теплова енергія",15689]]);var a={title:"Витрати за період з 11.07.2015 по 21.12.2015"};var b=new google.visualization.PieChart(document.getElementById("piechart"));b.draw(c,a)};</script>
+<h3>Оберіть проміжок часу</h3>
+<div class=well>
+<div class="alert alert-error" id=alert>
+<strong>Оберіть початкову та кінцеву дати</strong>
+</div>
+<table class=table>
+<thead>
+<tr>
+<th>Початкова дата <button type=button class="btn btn-default" id=dp4 data-date-format=yyyy-mm-dd data-date=2016-01-01>Вибрати</button></th>
+<th>Кінцева дата <button type=button class="btn btn-default" id=dp5 data-date-format=yyyy-mm-dd data-date=2016-10-25>Вибрати</button></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id=startDate>2016-01-01</td>
+<td id=endDate>2016-10-25</td>
+<button type=button class="btn btn-primary pull-right" onclick="get_req_energo4()">Аналізувати</button>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Структура витрат, по видам ресурсу</h3>
+<div class=well>
+<div id=piechart style=width:900px;height:500px></div>
+</div>
+<center><h3><span class="label label-info">Аналіз показників енерговитрат</span></h3></center><br>
+<div class=row>
+<div class=col-sm-12>
+<table class="table table-striped table-bordered">
+<tr><td width=50%><a href=/energo-analizis/1><img src=/images/ea1.jpg> Динаміка споживання по закладам</a></td></tr>
+<tr><td><a href=/energo-analizis/2><img src=/images/ea2.jpg> Витрати ресурсів закладами</a></td></tr>
+<tr><td><a href=/energo-analizis/3><img src=/images/ea3.jpg> Споживання ресурсів закладами</a></td></tr>
+<tr><td><a href=/energo-analizis/4><img src=/images/ea4.jpg> Структура витрат</a></td></tr>
+<tr><td><a href=/energo-analizis/5><img src=/images/ea5.jpg> Вартість ресурсів витрачених навчальними закладами</a></td></tr>
+</table>
+</div>
+</div>
+<div class=page-header>
+</div>
+<footer>
+<div class=row>
+<div class=col-lg-12>
+<ul class="nav nav-pills">
+<li class=pull-right><a href=#top>Наверх </a></li>
+<li><a href=/concept>Концепція </a></li>
+<li><a href=/>Проекти </a></li>
+<li><a href=/news>Новини </a></li>
+<li><a href=http://www.mlt.gov.ua>Міська влада </a></li>
+<li><a href=/faq>Допомога </a></li>
+<li><a href=/support>Підтримка </a></li>
+</ul>
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>

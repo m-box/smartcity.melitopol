@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Сайт електроних сервісів міста Мелітополь. Кабінет самообслуговування, контаку з адміністрацією та мерією міста">
+<meta name=keywords content="SmartCity.Melitopol, SM, SmartCity, Melitopol">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name=author content="Сажнєв Михайло / 100000718680383, Вячеслав Рєдькін / 100012765812627, Станіслав Деріпаско / 100012813070004">
+<title >SmartCity.Melitopol. Кабінет електронних сервісів</title>
+<link href=/css/fractal.css rel=stylesheet>
+<link href=/css/bootstrap.min.css rel=stylesheet>
+<style> .valids { margin-top: -15px; margin-left: 9px; position: relative; width: 16px; height: 16px; }
+</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TB2T2L');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body onLoad="login_if();">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TB2T2L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id=scheader>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<h5 class=pull-right>Вітаємо, <a href=# data-toggle=modal data-target=#myModal>увійти в особистий кабінет</a>
+<a href=# onclick="logout_1();">Вийти</a>
+</h5>
+<div class="modal fade" id=myModal role=dialog>
+<div class="modal-dialog modal-sm">
+<div class=modal-content>
+<div class=modal-header>
+<button type=button class=close data-dismiss=modal>&times;</button>
+<h3>Увійти в систему</h3>
+</div>
+<div class=modal-body>
+<form class=form-inline role=form>
+<div class=form-group>
+<label for=usrname><span class="glyphicon glyphicon-user"></span> Введіть логін</label>
+<input type=email class=form-control id=email placeholder=Логін>
+</div><br>
+<div class=form-group>
+<label for=psw><span class="glyphicon glyphicon-eye-open"></span> Введіть пароль</label>
+<input type=password class=form-control id=pwd placeholder=Пароль>
+</div><br>
+<a href=/404>Нагадати пароль</a><br>
+<div class="checkbox pull-right">
+<label><input type=checkbox> Запам'ятати мене</label>
+</div><br>
+</form>
+</div>
+<div class=modal-footer>
+<button type=submit class="btn btn-primary" data-dismiss=modal onclick = "login_1();" >Увійти</button>
+</div>
+</div>
+</div>
+</div>
+<a href=/><img src=/img/logo.png alt="Кабінет електроних сервісів: SmartMelitopol" style="float:left;width:80px;height:80px;margin:10px 10px 0 0"/></a>
+<h3><p class=text-primary><b>SmartCity. <br>Кабінет електронних сервісів</b></p></h3>
+</div>
+</div>
+</div>
+</div>
+<div class=container>
+<div class=page-header>
+<ul class="nav nav-pills">
+<li><a href=/concept>Концепція <span class=badge>1</span></a></li>
+<li class=active><a href=index.html>Проекти <span class=badge>42</span></a></li>
+<li><a href=/news>Новини <span class=badge>0</span></a></li>
+<li><a href=http://www.mlt.gov.ua>Міська влада <span class=badge>1</span></a></li>
+<li><a href=/faq>Допомога </a></li>
+<form class="navbar-form navbar-left pull-right" role=search>
+<div class=form-group>
+<input type=text class=form-control placeholder="Пошук сервісів">
+</div>
+<button type=submit class="btn btn-default">Пошук</button>
+</form>
+</ul>
+</div>
+<div class=jumbotron>
+<h2><span class="label label-info">Реєстрація</span></h2><br>
+<table>
+<tr>
+<td width=20%></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td class="text pull-right">Всі поля обов'язкові для заповнення*</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<label class=checkbox-inline><input type=checkbox id = "accept_0" >Заповнюючи цю анкету я даю згоду на те, що внесена мною інформація буде зберігатися та оброблятися в інформаційних системах Мелітопольської міської ради відповідно до призначення.</label>
+</td>
+<td><div class="valids" id="validCheck"></div></td>
+</tr>
+<tr>
+<td class=pull-right><span class="label label-default">E-mail:</span></td>
+<td>
+<input type=text class=form-control value = "" id = "e_mail_reg" placeholder="Введіть Вашу електронну пошту"><br>
+</td>
+<td><div class="valids" id="validEmail"></div></td>
+</tr>
+<tr>
+<td class=pull-right><span class="label label-default">Прізвище:</span></td>
+<td>
+<input type=text class=form-control placeholder="Ваше прізвище" value = "" id = "lastname_reg"><br>
+</td>
+<td><div class="valids" id="validLastname"></div></td>
+</tr>
+<tr>
+<td class=pull-right><span class="label label-default">Iм'я:</span></td>
+<td>
+<input type=text class=form-control value = "" id = "Name_reg" placeholder="Ваше ім’я"><br>
+</td>
+<td><div class="valids" id="validname"></div></td>
+</tr>
+<tr>
+<td class=pull-right><span class="label label-default">По батькові:</span></td>
+<td>
+<input type=text class=form-control value = "" id = "second_name"placeholder="По батькові"><br>
+</td>
+<td><div class="valids" id="validSecondname"></div></td>
+</tr>
+<tr>
+<td class=pull-right><span class="label label-default">Рік народження:</span></td>
+<td>
+<input type=text class=form-control value = "" id = "birthday" placeholder="11-12-1999"></div><br>
+</td>
+<td><div class="valids" id="validDate"></div></td>
+</tr>
+<tr>
+<td class=pull-right><span id = "gender" class="label label-default">Стать:</span></td>
+<td>
+<select id = "gender">
+<option selected>Чоловіча</option>
+<option>Жіноча</option>
+</select><br>&nbsp
+</td>
+<tr>
+<td class=pull-right><span class="label label-default">Соціальний стан:</span></td>
+<td>
+<select id = "soc_stan">
+<option>Пенсіонер</option>
+<option selected>Робітник</option>
+<option>Фермер</option>
+<option>Працівник бюджетної сфери</option>
+<option>Державний службовець</option>
+<option>Військовослужбовець</option>
+<option>Підприємець</option>
+<option>Безробітний</option>
+<option>Учень, студент</option>
+<option>Служитель релігійної організації</option>
+<option>Особа, що позбавлена волі; воля обмежена</option>
+<option>Інше</option>
+</select><br>&nbsp
+</td>
+</tr>
+<tr>
+<td class=pull-right><span class="label label-default">Пільгова категорія:</span></td>
+<td>
+<select id = "pilg_cat">
+<option>Учасник війни</option>
+<option>Дитина війни</option>
+<option>Інвалід Великої Вітчизняної війни</option>
+<option>Інвалід війни</option>
+<option>Учасник бойових дій</option>
+<option>Ветеран праці</option>
+<option>Інвалід I групи</option>
+<option>Інвалід II групи</option>
+<option>Інвалід III групи</option>
+<option>Дитина-інвалід</option>
+<option>Одинока мати</option>
+<option>Мати-героїня</option>
+<option>Багатодітна сім'я</option>
+<option>Особа, що потерпіла від Чорнобильської катастрофи</option>
+<option>Учасник ліквідації наслідків аварії на Чорнобильській АЕС</option>
+<option>Герой України</option>
+<option>Герой Радянського Союзу</option>
+<option>Герой Соціалістичної Праці</option>
+<option>Дитина</option>
+<option selected>Інші категорії</option>
+<option>Депутат</option>
+<option>Народний депутат України</option>
+</select><br>&nbsp
+</td>
+</tr>
+<tr>
+<td class=pull-right><span class="label label-default">Місто / Район:</span></td>
+<td>
+<input type=text value = "" id = "city" class=form-control placeholder="Назва населеного пункту проживання"></div><br>
+</td>
+<td><div class="valids" id="validCity"></div></td>
+</tr>
+<tr>
+<td class=pull-right><span class="label label-default">Контактний телефон:</span></td>
+<td>
+<input type=text value = "" id = "number" class=form-control placeholder="096 ххх хх хх"></div>
+</td>
+<td><div class="valids" id="validTelephone"></div></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<label class=checkbox-inline><input id = "accept" type=checkbox value>Я згоден(а) отримувати інформаційні повідомлення електронною поштою від Мелітопольської міської ради</label><br>&nbsp
+</td>
+</tr>
+<tr>
+<td class=pull-right><span  class="label label-default">Пароль:</span></td>
+<td>
+<input type=password value = "" id = "passs" class=form-control placeholder="наберіть пароль"></div>
+</td>
+<td><div class="valids" id="validPass"></div></td>
+</tr>
+<tr>
+<td></td>
+<td>
+*Довжина паролю повинна бути більш ніж 6 символів<br>&nbsp
+</td>
+</tr>
+<tr>
+<td class=pull-right><td class=pull-right><span  class="label label-default">Повторіть пароль:</span></td></td>
+<td>
+<input type=password value = "" id = "pwd2" class=form-control placeholder="наберіть пароль ще раз"></div><br>
+</td>
+<td><div class="valids" id="validrePass"></div></td>
+</tr>
+<tr>
+<td class=pull-right><span class="label label-default">Захисний код:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<button type=button id="submit_f" class="btn btn-success pull-right" onclick = "registration();">Зареєструватись</button>
+</td>
+</tr>
+</table>
+</div>
+<div class=page-header>
+</div>
+<footer>
+<div class=row>
+<div class=col-lg-12>
+<ul class="nav nav-pills">
+<li class=pull-right><a href=#top>Наверх </a></li>
+<li><a href=/concept>Концепція </a></li>
+<li><a href=/>Проекти </a></li>
+<li><a href=/news>Новини </a></li>
+<li><a href=http://www.mlt.gov.ua>Міська влада </a></li>
+<li><a href=/faq>Допомога </a></li>
+<li><a href=/support>Підтримка </a></li>
+</ul>
+</div>
+</div>
+</footer>
+</div>
+<script type="text/javascript"  src="/js/jquery.min.js"></script>
+<script type="text/javascript"  src="/js/bootstrap.min.js"></script>
+<script type="text/javascript"  src="/js/log_user.js"></script>
+<script type="text/javascript"  src="/js/valid.js"></script>
+<script type="text/javascript"  src="/js/JS_req.js"></script>
+</body>
+</html>
