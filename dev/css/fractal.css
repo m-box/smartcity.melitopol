@@ -4,7 +4,7 @@
  * m-box.org.ua
  */
 #scheader {
-  height: 90px;
+  height: 76px;
   background: -webkit-linear-gradient(rgba(223,223,223,1), rgba(255,255,255,1)); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(rgba(223,223,223,1), rgba(255,255,255,1)); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(rgba(223,223,223,1), rgba(255,255,255,1)); /* For Firefox 3.6 to 15 */
@@ -13,7 +13,7 @@
 #rockit {
   position:relative;
   height:218px;
-  width:450px;  
+  width:450px;
   margin:0 auto;
 }
 #rockit img {
@@ -56,9 +56,37 @@ figure figcaption > a {
 	z-index: 1;
 	font-size: 0;
 }
-.opacity:hover figcaption {
-	opacity: 0.8;
-}
 .opacity:hover img.top {
 	opacity: 0
 }
+.placeholder figure {
+	display: block;
+	position: relative;
+	height:300px;
+	width:100%;
+	overflow: hidden;
+}
+.placeholder figcaption {
+	position: absolute;
+	background: black;
+	color: white;
+	padding: 0px;
+	left: 0px; right: 0px; top: 0px; 
+	height:100%;
+	width:100%;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity  0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+.opacity:hover figcaption {
+	opacity: 0.8;
+}
+.valids	{
+	margin-top: -15px;
+	margin-left: 9px;
+	position: relative;
+	width: 16px;
+	height: 16px;
+	}

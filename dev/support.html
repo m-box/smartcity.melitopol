@@ -14,8 +14,20 @@
 <script src=js/bootstrap.min.js></script>
 <script src=js/log_user.js></script>
 <script type="text/javascript"  src= "js/JS_req.js"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TB2T2L');</script>
+<!-- End Google Tag Manager -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
-<body>
+<body onLoad="login_if();">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TB2T2L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div id=scheader>
 <div class=container>
 <div class=row>
@@ -63,7 +75,7 @@
 <div class=page-header>
 <ul class="nav nav-pills">
 <li><a href=concept.html>Концепція <span class=badge>1</span></a></li>
-<li><a href=index.html>Проекти <span class=badge>42</span></a></li>
+<li><a href=/>Проекти <span class=badge>42</span></a></li>
 <li><a href=news.html>Новини <span class=badge>0</span></a></li>
 <li><a href=http://www.mlt.gov.ua>Міська влада <span class=badge>1</span></a></li>
 <li><a href=faq.html>Допомога </a></li>
@@ -86,6 +98,7 @@
 </div>
 </div>
 <span class="label label-default">Захисний код:</span>
+<div class="g-recaptcha" data-sitekey="6LePZQoUAAAAAJHZ2HO-jpwHymj8MXFZU4gbJa_R"></div>
 <button type=button class="btn btn-success pull-right">Відправити</button>
 </div>
 <div class=page-header>
@@ -96,7 +109,7 @@
 <ul class="nav nav-pills">
 <li class=pull-right><a href=#top>Наверх </a></li>
 <li><a href=concept.html>Концепція </a></li>
-<li><a href=index.html>Проекти </a></li>
+<li><a href=/>Проекти </a></li>
 <li><a href=news.html>Новини </a></li>
 <li><a href=http://www.mlt.gov.ua>Міська влада </a></li>
 <li><a href=faq.html>Допомога </a></li>
