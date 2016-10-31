@@ -26,12 +26,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   body {
       position: relative;
   }
-  #service0 {padding-top:50px; color: #fff; background-image: url("images/back.jpg"); background-repeat:no-repeat; opacity:1; height: 100vh;}
-  #service1 {padding-top:50px; color: #fff; background-color: #ffffff;}
-  #service2 {padding-top:50px; color: #000; background-color: #f0f0f0;}  
+  #service1 {padding-top:50px; color: #fff; background-image: url("images/back.jpg"); background-repeat:no-repeat; opacity:1; background-size: cover;}
+  #service2 {padding-top:50px; color: #000; background-color: #f0f0f0;}
   #service3 {padding-top:50px; color: #000; background-image: url("images/back2.jpg"); background-repeat:no-repeat; opacity:1; background-size: cover;}	
   #service4 {padding-top:50px; color: #000; background-color: #f0f0f0;}
-  #service5 {padding-top:50px; color: #000; background-color: #ffffff;}
+  #service5 {padding-top:50px; color: #fff; background-color: #000000;}
   </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -79,7 +78,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 </div>
-<div class=modal-body id=sub_info style="font-size:10px"></div>
+<div class=modal-body id=sub_info style="font-size:10px">
+<!--<label for=psw><span class="glyphicon glyphicon-ok" style=color:green></span> @NAME @Fname @Mname, Вам нарахована субсидія! Сума субсидії складає @SUM_SYBS грн. Субсидія діє від: @DATA_POCH до: @DATA_KIN.</label>
+<p><h4>Повідомлення про надання субсидій @N_SPRAVY </h4></p>
+1. <b>@COL 9 @COL 10 @COL 11</b><br>
+2. <b>72@COL 4, місто Мелітополь, @COL 3 @COL 5, @COL 6, @COL 7, @COL 8.</b><br>
+Встановлено відсоток обов’язкової частки сплати @COL 14, призначено субсидію для відшкодування витрат на оплату житлово-комунальних послуг на опалювальний період, <b>з @COL 16 по @COL 17 включно</b>, щомісячно. В сумі <b>@COL 15.</b>
+По закінченню опалювального сезону субсидія буде перерахована.<br>
+<table>
+<tr><th>Організація</th><th>Особ.рахунок</th><th colspan=3 style=text-align:right>Соціальна норма</th><th style=text-align:right>Обов.плата</th></tr>
+<tr><td>@COL 18</td><td>@COL 19</td><td>@COL 22</td><td>@COL 23</td><td>@COL 24</td><td>@COL 25</td></tr>
+<tr><td>@COL 26</td><td>@COL 27</td><td>@COL 30</td><td>@COL 31</td><td>@COL 32</td><td>@COL 33</td></tr>
+<tr><td>@COL 34</td><td>@COL 35</td><td>@COL 38</td><td>@COL 39</td><td>@COL 40</td><td>@COL 41</td></tr>
+<tr><td>@COL 42</td><td>@COL 43</td><td>@COL 46</td><td>@COL 47</td><td>@COL 48</td><td>@COL 49</td></tr>
+<tr><td>@COL 50</td><td>@COL 51</td><td>@COL 54</td><td>@COL 55</td><td>@COL 56</td><td>@COL 57</td></tr>
+<tr><td>@COL 58</td><td>@COL 59</td><td>@COL 62</td><td>@COL 63</td><td>@COL 64</td><td>@COL 65</td></tr>
+<tr><td>@COL 66</td><td>@COL 67</td><td>@COL 70</td><td>@COL 71</td><td>@COL 72</td><td>@COL 73</td></tr>
+</table>
+<b>Увага! Ви зобов’язані щомісячно сплачувати обов’язкову частку плати.</b><br>
+При споживанні в об’ємах, менших від обов’язкової частки плати, сплачуються фактично спожиті послуги.<br>
+У разі змін у складі зареєстрованих, їх соціального статусу, в наданні ЖК-послуг, купівлі товарів або сплати послуг на суму понад 50тис. грн. Ви зобов’язані повідомити управлінння соціального захисту населення.<br>
+@current_day_month_year<br><br>
+<label for=psw><span class="glyphicon glyphicon-remove" style=color:red></span> Вибачте, @username_взяти_прізвище_з_форми_запиту, на цей момент вказані Вами дані відсутні в системі нарахування субсидій, або помилкові. Повторіть свій запит після оновлення бази або виправте помилки. @Дата_останнього_оновлення_бази.</label>-->
+</div>
 <div class="modal-footer noprint">
 <button type=submit class="btn btn-info" data-dismiss=modal onclick=printme()>Друк</button>
 <button type=submit class="btn btn-primary" data-dismiss=modal onClick="refreshPage()">Закрити</button>
@@ -93,40 +114,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="service1" class="container-fluid noprint">
 <center><h1 style="text-shadow: 3px 3px 5px black, 0 0 20px black, 0 0 5px blue; margin: 15% 0% 0% 0%;">СУБСИДІЯ ГАРАНТОВАНА ДЕРЖАВОЮ</h1></center>
 <center><h3 style="text-shadow: 1px 1px 2px black, 0 0 15px black, 0 0 5px blue; margin: 5% 0% 10% 0%;">Отримає кожен хто потребує</h3></center>
-</div>
-<div id="service1" class="container-fluid noprint">
-<div class="container">
 <div class=row>
-<div class=col-sm-6>
-    <a href="#service2"><img src="images/1.jpg" alt="" style="float: left;"></img>ЗАПИТ СТАТУСУ СУБСИДІЇ <br>Дізнайтеся про суму призначеної субсидії</a>
+<div class=col-xs-6>
+  <div class="panel panel-default" style="opacity:0.8;">
+    <center><a href="#service2"><span class="glyphicon glyphicon-ok-circle" style="font-size: 50pt; color: #ffcc66;"></span><br>Cтатус субсидій жителя Мелітополя</a></center>
+  </div>
 </div>
-<div class=col-sm-6>
-    <a href="#service4"><img src="images/2.jpg" alt="" style="float: left;"></img>ЯК ЗАПОВНИТИ ЗАЯВУ НА СУБСИДІЮ<br>Як правильно заповнити заяву?</a>
-</div>
-</div>
-<div class=row>
-<div class=col-sm-6>  
-    <a href="#service4"><img src="images/3.jpg" alt="" style="float: left;"></img>СУБСИДІЯ - ЦЕ ПРОСТО<br>Дізнайтеся як оформити субсидію</a>  
-</div>
-<div class=col-sm-6>  
-    <a href="#service4"><img src="images/4.jpg" alt="" style="float: left;"></img>ЯК ЗАПОВНИТИ ДЕКЛАРАЦІЮ<br>Як правильно заповнити декларацію?</a>  
+<div class=col-xs-6>
+  <div class="panel panel-default" style="opacity:0.8;">
+    <center><a href="#service3"><span class="glyphicon glyphicon-ok-sign" style="font-size: 50pt; color: #ffcc66; text-decoration: none;"></span><br>Розрахувати суму своєї субсидії</a></center>
+  </div>
 </div>
 </div>
 <div class=row>
-<div class=col-sm-6>
-    <a href="#service4"><img src="images/7.jpg" alt="" style="float: left;"></img>СУБСИДІЯ - ДОСТУПНА КОЖНОМУ<br>Спростування міфів про субсидію</a>
+<div class=col-xs-6>
+  <div class="panel panel-default" style="opacity:0.8;">
+    <center><a href="#service4"><span class="glyphicon glyphicon-question-sign" style="font-size: 50pt; color: #ffcc66; text-decoration: none;"></span><br>Відповіді на Ваші запитання</a></center>
+  </div>
 </div>
-<div class=col-sm-6>
-    <a href="#service5"><img src="images/6.jpg" alt="" style="float: left;"></img>ОФОРМЛЕННЯ СУБСИДІЇ ОНЛАЙН<br>Покрокова інструкція</a>
-</div>
-</div>
-<div class=row>
-<div class=col-sm-6>
-    <a href="#service3"><img src="images/5.jpg" alt="" style="float: left;"></img>КАЛЬКУЛЯТОР СУБСИДІЇ<br>Орієнтовний розрахунок розміру субсидій</a>
-</div>
-<div class=col-sm-6>
-    <a href="#service4"><img src="images/8.jpg" alt="" style="float: left;"></img>ЯК РОЗРАХОВУЄТЬСЯ РОЗМІР СУБСИДІЇ?<br>Нормативи при розрахунку субсидії?</a>
-</div>
+<div class=col-xs-6>
+  <div class="panel panel-default" style="opacity:0.8;">
+    <center><a href="#service5"><span class="glyphicon glyphicon-info-sign" style="font-size: 50pt; color: #ffcc66; text-decoration: none;"></span><br>Подача заявки на оформлення субсидії</a></center>
+  </div>
 </div>
 </div>
 </div>
@@ -134,9 +143,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--модуль запиту субсидій_start-->
 <div class="container" style=opacity:0.9;>
 <div class="panel panel-default">
-<div class=panel-heading style="background-color: #ffffff;">
+<div class=panel-heading>
 <h4 class=panel-title>
-<img src="images/1.jpg" alt="" style="float: left;"></img><h2> Запит статусу субсидій</h2><br>
+<h2><span class="glyphicon glyphicon-ok-circle" style="font-size: 50pt; color: #ffcc66;"></span></span> Запит статусу субсидій</h2>
 </h4>
 </div>
 <div class=panel-body>
@@ -157,11 +166,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div id="service3" class="container-fluid noprint">
 <!--калькулятор_start-->
-<div class="container"  style="background-color: #ffffff; opacity: 0.9;">
+<div class="container"  style="background-color: #f0f0f0; opacity: 0.9;">
 <div class=panel-body>
-<img src="images/5.jpg" alt="" style="float: left;"></img><h2>Калькулятор субсидій</h2>
-<br>
+<h2><span class="glyphicon glyphicon-ok-sign" style="font-size: 50pt; color: #ffcc66;"></span>  Калькулятор субсидій</h2>
 <b><h3>Кількість <i>зареєстрованих</i> осіб у квартирі (будинку): </h3></b>
+<br>
 <input class=form-control id=kilk_1 type=text style=width:120px value>
 <b><h3>Cукупний щомісячний дохід всіх зареєстрованих осіб: </h3></b>
 <br>
@@ -226,8 +235,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div id="service4" class="container-fluid noprint">
 <!--ЧаПи_start-->
-<div class="container"  style="background-color: #ffffff;">
-<img src="images/7.jpg" alt="" style="float: left;"></img><h2></span>Часті Питання</h2><br>
+<div class="container"  style="background-color: #f5f5f5;">
+<h2><span class="glyphicon glyphicon-question-sign" style="font-size: 50pt; color: #ffcc66;"></span>  Часті Питання</h2>
 <div class="well well-sm"><b>Що таке житлова субсидія?</b></div>
 Житлова субсидія надається у вигляді безповоротної державної допомоги, а саме (відповідно до пункту1 Положення про порядок призначення та надання населенню субсидій для відшкодування витрат на оплату житлово-комунальних послуг, придбання скрапленого газу, твердого та рідкого пічного побутового палива (далі: Порядок призначення субсидій)):
 <ul>
@@ -262,20 +271,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div id="service5" class="container-fluid noprint">
 <!--Онлайн_форма_start-->
-<div class="container">
-<img src="images/7.jpg" alt="" style="float: left;"></img><h2>Оформлення субсидій</h2><br>
+<div class="container" style="background-color: #000000;">
+<h2><span class="glyphicon glyphicon-info-sign" style="font-size: 50pt; color: #ffcc66;"></span>  Оформлення субсидій</h2>
 <div class="alert alert-warning"><b>Куди звертатись за призначенням субсидії?</b></div>
 Житлові субсидії призначаються структурними підрозділами з питань соціального захисту населення.
 Жителі сільської місцевості можуть передати заяви з необхідними для призначення субсидій документами через уповноважених осіб, які визначаються виконавчими органами сільських і селищних рад (відповідно до пункту 3 Порядку призначення субсидій).
 Жителі міста Мелітополя можуть звертатись для оримання субсидій за наступними адресами:
 <ol>
-<li><a href="https://www.google.com.ua/maps/place/46%C2%B049'39.8%22N+35%C2%B021'29.6%22E/@46.827734,35.3560263,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d46.827734!4d35.358215" style="text-decoration: none;">просп. Б. Хмельницького, 87, тел. 42-83-27;</a>
-<li><a href="https://www.google.com.ua/maps/place/46%C2%B050'37.3%22N+35%C2%B021'50.9%22E/@46.843706,35.3619603,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d46.843706!4d35.364149" style="text-decoration: none;">вул. Гетьманська, 137, тел. 42-40-60;</a>
-<li><a href="https://www.google.com.ua/maps/place/46%C2%B051'47.4%22N+35%C2%B022'53.9%22E/@46.863158,35.3805387,18z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d46.863158!4d35.381633" style="text-decoration: none;">просп. 50-річчя Перемоги, 36/1, тел. 5-37-78;</a>
-<li><a href="https://www.google.com.ua/maps/place/46%C2%B051'35.8%22N+35%C2%B020'25.0%22E/@46.859948,35.3397288,19z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d46.859948!4d35.340276" style="text-decoration: none;">вул. Гагаріна, 1, тел. 7-22-22.</a>
+<li><a href="https://www.google.com.ua/maps/place/46%C2%B049'39.8%22N+35%C2%B021'29.6%22E/@46.827734,35.3560263,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d46.827734!4d35.358215" style="text-decoration: none; color: #ffffff">просп. Б. Хмельницького, 87, тел. 42-83-27;</a>
+<li><a href="https://www.google.com.ua/maps/place/46%C2%B050'37.3%22N+35%C2%B021'50.9%22E/@46.843706,35.3619603,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d46.843706!4d35.364149" style="text-decoration: none; color: #ffffff">вул. Гетьманська, 137, тел. 42-40-60;</a>
+<li><a href="https://www.google.com.ua/maps/place/46%C2%B051'47.4%22N+35%C2%B022'53.9%22E/@46.863158,35.3805387,18z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d46.863158!4d35.381633" style="text-decoration: none; color: #ffffff">просп. 50-річчя Перемоги, 36/1, тел. 5-37-78;</a>
+<li><a href="https://www.google.com.ua/maps/place/46%C2%B051'35.8%22N+35%C2%B020'25.0%22E/@46.859948,35.3397288,19z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d46.859948!4d35.340276" style="text-decoration: none; color: #ffffff">вул. Гагаріна, 1, тел. 7-22-22.</a>
 </ol>
 Можна відправити документи поштою на адресу: м. Мелітополь, просп. Б. Хмельницького, буд. 68-А.<br>
-Також можна <a href="https://subsidii.mlsp.gov.ua/" style="text-decoration: none;">подати субсидію в електронній формі.</a>
+Також можна <a href="https://subsidii.mlsp.gov.ua/" style="text-decoration: none; color: #ffffff;">подати субсидію в електронній формі.</a>
 </div>
 <!--Онлайн_форма_end-->
 <a href="#top"><img src="images/up_arrow.png" alt="наверх" width="20px"></img></a>

@@ -44,12 +44,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--Навігаційна панель заголовку та форма пошуку-->
 <nav class="navbar navbar-inverse navbar-fixed-top" style="min-height: 60px;">
   <div class="container-fluid noprint">
+  <div style="color:#fff; position: absolute; right: 30px;"><h6>Гаряча лінія: 42-83-28</h6></div>
     <div class="navbar-header"> 
 	  <a class="navbar-brand top" href="#"><img src="img/logo.png" height=30px style="margin: 15px 0px 0px 0px ;"></img></a>
-      <a class="navbar-brand" style="line-height: 60px;" href="#"><b>Субсидії мелітопольцям</b></a>
+      <a class="navbar-brand" style="line-height: 60px;" href="#"><b>Субсидії мелітопольцям</b></a>      
     </div>
-    <div>
-      <div class="collapse navbar-collapse" id="myNavbar">
+    <div>    
+      <div class="collapse navbar-collapse" id="myNavbar">      
         <ul class="nav navbar-nav pull-right">
           <li><a href="#service2" style="line-height: 60px;"><b>Дізнатись Ваш розмір субсидії</b></a></li>
           <li><a href="#service3" style="line-height: 60px;"><b>Калькулятор субсидій</b></a></li>
@@ -88,7 +89,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 <!--modal запиту_end-->
-<div id="service0" class="container-fluid noprint">
+<div id="service0" class="container-fluid noprint" style="padding-right: 0px; padding-left: 0px">
 <!--карусель-->  
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -100,14 +101,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="images/back.jpg"  style="height: 100vh; width: 100%;" alt="Площа перемоги">
+      <img src="images/back.jpg"  style="height: 100vh; width: 100%; object-fit: cover;" alt="Площа перемоги">
       <div class="container" style="position: absolute; top: 35%; left: 20%; width: 100%; height: 100%;">      
       <h1 style="text-shadow: 3px 3px 5px black, 0 0 20px black, 0 0 5px blue; ">СУБСИДІЯ ГАРАНТОВАНА ДЕРЖАВОЮ</h1>
       <h3 style="text-shadow: 1px 1px 2px black, 0 0 15px black, 0 0 5px blue; ">Дізнайтесь про суму призначеної субсидії</h3><br><a href="#service2"><button type="button" class="btn btn-info" href="#service2"><b>Детальніше </b><span class="glyphicon glyphicon-share-alt"></span></button></a>
       </div>
     </div>
     <div class="item">
-      <img src="images/back2.jpg" style="height: 100vh; width: 100%;" alt="Пам'ятник Тарасу Шевченко">
+      <img src="images/back2.jpg" style="height: 100vh; width: 100%; object-fit: cover;" alt="Пам'ятник Тарасу Шевченко">
       <div class="container" style="position: absolute; top: 35%; left: 20%; width: 100%; height: 100%;">
       <h1 style="text-shadow: 3px 3px 5px black, 0 0 20px black, 0 0 5px blue; ">СУБСИДІЯ ЦЕ ЕКОНОМІЯ СІМЕЙНОГО БЮДЖЕТУ</h1>
       <h3 style="text-shadow: 1px 1px 2px black, 0 0 15px black, 0 0 5px blue; ">Дізнайтесь як оформити субсидію</h3><br><a href="#service3"><button type="button" class="btn btn-info" style="text-shadow: 0 0 20px black">
@@ -115,7 +116,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="item">
-      <img src="images/back3.jpg" style="height: 100vh; width: 100%;" alt="Колесо огляду">
+      <img src="images/back3.jpg" style="height: 100vh; width: 100%; object-fit: cover;" alt="Колесо огляду">
       <div class="container" style="position: absolute; top: 35%; left: 20%; width: 100%; height: 100%;">
       <h1 style="text-shadow: 3px 3px 5px black, 0 0 20px black, 0 0 5px blue; ">СУБСИДІЯ ДОСТУПНА КОЖНОМУ</h1>
       <h3 style="text-shadow: 1px 1px 2px black, 0 0 15px black, 0 0 5px blue; ">Спростування мифів про субсидію</h3><br><a href="#service4"><button type="button" class="btn btn-info" style="text-shadow: 3px 3px 5px black, 0 0 20px black, 0 0 5px blue; "><b>Детальніше </b><span class="glyphicon glyphicon-share-alt"></span></button></a>
@@ -266,6 +267,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class=input-group><input type=text class=form-control id="surname_ukr" value="" placeholder=Сидоренко></div><br>
 <div class=panel-heading><h4>Введіть Ваше прізвище російською мовою<a href=#note style=color:red>*</a></h4></div>
 <div class=input-group><input type=text class=form-control id="surname_rus"  value="" placeholder=Сидоренко></div><br>
+<span class="label label-default">Захисний код:</span>
 <div class="g-recaptcha" data-sitekey="6LeRJgcUAAAAAHsRf4qu1UCygwxaVW8jC6Lx4vmR"></div><text style="color:red;"  id="captcha_err"></text><br>
 <button class="btn btn-primary btn-lg" onClick="sub_info()"> Запит</button>
 <h5 id=note style=color:red>*запит прізвища російською мовою діє тимчасово, у звя’зку з особливістю бази даних Мінсоцполітики міста.</h5>
@@ -384,7 +386,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="alert alert-warning"><b>Куди звертатись за призначенням субсидії?</b></div>
 Житлові субсидії призначаються структурними підрозділами з питань соціального захисту населення.
 Жителі сільської місцевості можуть передати заяви з необхідними для призначення субсидій документами через уповноважених осіб, які визначаються виконавчими органами сільських і селищних рад (відповідно до пункту 3 Порядку призначення субсидій).
-Жителі міста Мелітополя можуть звертатись для оримання субсидій за наступними адресами:
+Жителі міста Мелітополя можуть звертатись для отримання субсидій за наступними адресами:
 <ol>
 <li><a href="https://www.google.com.ua/maps/place/46%C2%B049'39.8%22N+35%C2%B021'29.6%22E/@46.827734,35.3560263,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d46.827734!4d35.358215" style="text-decoration: none;">просп. Б. Хмельницького, 87, тел. 42-83-27;</a>
 <li><a href="https://www.google.com.ua/maps/place/46%C2%B050'37.3%22N+35%C2%B021'50.9%22E/@46.843706,35.3619603,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d46.843706!4d35.364149" style="text-decoration: none;">вул. Гетьманська, 137, тел. 42-40-60;</a>
