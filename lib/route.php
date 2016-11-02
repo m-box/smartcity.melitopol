@@ -5,7 +5,7 @@ function regular_m ($str1, $str2)
 $patterns = array(
         ':num' => '/^\d+$/',
         ':str' => '/[a-zA-Z]+/',
-        ':any' => '/^[0-9a-zA-Zа-яёА-ЯЁ\-\_]+$/',
+        ':any' => '/[0-9a-zA-Zа-яёА-ЯЁ\-\_]+/', ///^[0-9a-zA-Zа-яёА-ЯЁ\-\_]+$/
 		);
 		
 if (!isset($patterns[$str1]))
@@ -29,7 +29,8 @@ function route ($route)
 {
 	
   $url = $route;
-  $url = rtrim($url, '/');
+  $url = rtrim($url, '/'); //Убираем слэш из начала строки
+  $url = ltrim($url, '/'); //Убираем слэш из конца строки
   $url = explode('/', $url); //Получаем розбитый на части URL
   $routes = file_get_contents("route.json"); //Подгружаем файл с маршрутами
   $arr=json_decode($routes, true); //Превращаем его в массив
