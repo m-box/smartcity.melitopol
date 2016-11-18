@@ -435,8 +435,8 @@ var re=JSON.stringify(params);
 		
 		}})
 		return result;
-}
-*/
+}*/
+
 
 //get energo1
 	function get_req_energo1(){
@@ -487,10 +487,6 @@ switch (value) {
     break;
 }
 
-/*if (value=="Кількість кВт"){value='electro'}
-else if (value=="Кількість газу"){value="gas"}
-else if (value=="Кількість води"){value="water"}
-else if (value=="Кількість тепла"){value="heat"};*/
 var out = [];
 var ch=0;
 
@@ -545,13 +541,9 @@ console.log (data);
 
         var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
-        chart.draw(data, options);							
-							
-							
-							
-										}
-										
-										}})
+        chart.draw(data, options);
+        	}
+        	 }})
 }
 //get energo2
 	function get_req_energo2(){
@@ -569,33 +561,150 @@ console.log (data);
 		data:'data='+ requery,
 		success: function(res) {
 		var result = JSON.parse(res);
-		if (result.data=="error"){
-							var data_r = {
-							//
-										}
-	}}})
+		if (result.data!="error"){
+var object=result.data;							
+var mark=0;							
+
+
+var out = [];
+var ch=0;
+
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+
+
+ function drawChart() {
+	 var data=[];
+
+var i=0;
+ $.each(object ,function() {
+
+	data[i]=[this.name , this.value];
+}	)
+
+console.log (data);
+        var data = google.visualization.arrayToDataTable(data);
+		 var options = {
+        title: "Title",
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+        }
+        var chart = new google.visualization.LineChart(document.getElementById('columnchart_material'));
+
+        chart.draw(data, options);
+      }	
+       }})
 }
 //get energo3
-	function get_req_energo3(){
-	var startDate = $("#startDate").val();
-	var endDate = $("#endDate").val();
-	var data = {
+	function get_req_energo1(){
+	var startDate = $("#startDate").text();
+	var endDate = $("#endDate").text();
+	var data = { method:"get_if",
 				data: [
-							["date",">=",startDate-1],
+							["date",">=",startDate],
 							["date","<=", endDate],						
 					  ]	}
+	
 	var requery=JSON.stringify(data);
 	var sub_req = $.ajax({
-		url: 'api/sobes',
+		url: 'api/data',
 		type: 'post',
 		data:'data='+ requery,
 		success: function(res) {
 		var result = JSON.parse(res);
-		if (result.data=="error"){
-							var data_r = {
-								//					
-					  	}
-										}}})
+		if (result.data!="error"){
+var object=result.data;							
+var mark=0;							
+var value=$('input[name="optradio1"]:checked').val();
+var tarif;
+switch (value) {
+  case "Кількість кВт":
+    value='electro';
+    break
+    case "Кількість газу":
+    value='gas';
+    break
+    case "Кількість води":
+    value='water';
+    break;
+    case "Кількість тепла":
+    value='teplo';
+    break;
+	    case "1":
+    value='electro'; mark=1; tarif=tarifpicker(value, "1");
+    break;
+	    case "2":
+    value='gas'; mark=1; tarif=tarifpicker(value, "1");
+    break;
+	    case "3":
+    value='water'; mark=1; tarif=tarifpicker(value, "1");
+    break;
+	    case "4":
+		{value='teplo'; mark=1; tarif=tarifpicker(value, "1");}
+    break;
+}
+
+var out = [];
+var ch=0;
+
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+
+
+ function drawChart() {
+	 var data=[]
+	 var pred;
+var i=0;
+	 $.each(object ,function() {
+	
+if (i==0){pred = this[value];
+if (mark==0)
+{data[i]=['Дата', 'Кількість'];}
+else
+{data[i]=['Дата', 'UAH'];}	
+i++;}	
+if (i!=0){
+var colvo=this[value]-pred;
+if (mark==0)
+{data[i]=[this.name , colvo];}
+else
+{
+	var sum=colvo*tarif.price;
+	data[i]=[this.name , sum];
+}	
+
+i++; pred=this[value];
+}})
+
+console.log (data);
+        var data = google.visualization.arrayToDataTable(data);
+		 var options = {
+          title: 'Показники',
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" }
+        }
+        var chart = new google.visualization.LineChart(document.getElementById('columnchart_material'));
+
+        chart.draw(data, options);
+      }
+
+
+        var options = {
+          title: 'Данні',
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('columnchart_material'));
+
+        chart.draw(data, options);
+        	}
+        	 }})
 }
 	//get energo4
 
@@ -614,11 +723,44 @@ console.log (data);
 		data:'data='+ requery,
 		success: function(res) {
 		var result = JSON.parse(res);
-		if (result.data=="error"){
-							var data_r = {
-										//
-											}
-										}}})
+		if (result.data!="error"){
+							
+							
+							
+							var object=result.data;							
+var mark=0;							
+
+
+var out = [];
+var ch=0;
+
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+
+
+ function drawChart() {
+	 var data=[];
+	 var i=0;
+	  $.each(object ,function() {
+
+	data[i]=[this.name , this.value];
+}	)
+
+
+
+
+console.log (data);
+        var data = google.visualization.arrayToDataTable(data);
+		 var options = {
+        title: "Title"
+      };
+        }
+       var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+        }
+										}})
 }
 // get energo5
 	
@@ -637,10 +779,38 @@ console.log (data);
 		data:'data='+ requery,
 		success: function(res) {
 		var result = JSON.parse(res);
-		if (result.data=="error"){
-							var data_r = {
-									//
-				}
-			}
+		if (result.data!="error"){
+							
+							
+							var object=result.data;							
+var mark=0;							
+
+
+var out = [];
+var ch=0;
+
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+
+
+ function drawChart() {
+	 var data=[];
+	 var i=0;
+	  $.each(object ,function() {
+	data[i]=[this.name , this.value];
+}	)
+console.log (data);
+        var data = google.visualization.arrayToDataTable(data);
+		 var options = {
+        title: "Title",
+         bar: {groupWidth: "95%"},
+        legend: { position: "none" }, 
+      };
+        }
+       var chart = new google.visualization.PieChart(document.getElementById('columnchart_material'));
+        chart.draw(data, options);
+        }
 	}})
 }
