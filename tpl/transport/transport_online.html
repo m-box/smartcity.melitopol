@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ua" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang=en>
 <head>
 <meta charset="UTF-8">
@@ -14,6 +14,8 @@
 <script src=/js/bootstrap.min.js></script>
 <script src=/js/log_user.js></script>
 <script type="text/javascript"  src= "/js/JS_req.js"></script>
+<script src='http://maps.google.com/maps/api/js?v=3.13&sensor=false&language=ua' type='text/javascript'></script>
+<script type="text/javascript" src="http://widget.eway.in.ua/routes-widget/js/EasyWayRoutesWidget.js"></script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -89,15 +91,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="alert alert-dismissible alert-success">
 <button type=button class=close data-dismiss=alert>&times;</button>
-<strong>Увага!</strong> Цей сервіс заморожено. На превеликий жаль!.. Спробуйте інші міста, наприклад<a href="http://www.eway.in.ua/ua/cities/lviv/routes" class=alert-link> Львів.</a>.
+<strong>Увага!</strong> Цей сервіс заморожено. На превеликий жаль!.. Спробуйте інші міста, наприклад<a href="http://www.eway.in.ua/ua/cities/lviv/routes" class=alert-link> Львів.</a>
 </div>
 </div></div>
 <div class="container">
-<div class=page-header>
-		<h1><b>Транспорт-онлайн.</b></h1>
-			<div class="container">
-			<iframe width=100% height=800px src='http://www.eway.in.ua/ua/cities/lviv/routes'></iframe>
+
+		<h1><a href="http://www.eway.in.ua/ua/cities/melitopol" target="_blank"><b>Транспорт-онлайн.</b></a></h1>
+						
+			<div id="eway-widget-container" style="width: 90%; height: 800px;">
+			<script type="text/javascript">
+			window.onload = function(){
+			var widget = EasyWayRoutesWidget({
+			id: 654,
+			hash: "d0b82554aa75828456b66dd58ee62bdb",
+			container_id: "eway-widget-container",
+			lang: "ua",
+			routes_per_line: 10
+			});
+			}
+			</script>
 			</div>
+			
+</div>
 <div class="container">
 <div class=page-header>
 </div>
