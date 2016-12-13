@@ -58,7 +58,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </form>
 </div>
 <div class=modal-footer>
-<a class="btn btn-primary" href="/registration">Реєстрація</a>
+<a class="btn btn-primary" href=/registration>Реєстрація</a>
 <button type=submit class="btn btn-primary" onclick = "login_1();" id = "login_0">Увійти</button>
 </div>
 </div>
@@ -77,7 +77,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><a href=/>Проекти </a></li>
 <li><a href=/news>Новини </a></li>
 <li><a href=http://www.mlt.gov.ua>Міська влада </a></li>
-<li><a href=/forum>Форум </a></li>
+<li class="active"><a href=/forum>Форум </a></li>
 <li><a href=/faq>Допомога </a></li>
 <form class="navbar-form navbar-left pull-right" role=search>
 <div class=form-group>
@@ -91,94 +91,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <button type=button class=close data-dismiss=alert>&times;</button>
 <strong>Увага!</strong> Сайт знаходиться в розробці, працює <a href=# class=alert-link>в режимі обмеженого доступу</a>.
 </div>
-<div class=row>
-<div class=col-md-6>
-<figure class=opacity>
-<div id=rockit>
-<link><a href=/g2c>
-<picture>
-<source srcset=/img/btn_1_320px.jpg media="(max-width: 450px)">
-<img class="bottom img-rounded" src=/img/btn_1_1.jpg alt="Послуги населенню. G2C"/>
-<img class="top img-rounded" src=/img/btn_1.jpg alt="Послуги населенню. G2C" />
-</picture>
-</a>
 </div>
-<figcaption>
-<h2>Послуги населенню. <span>G2C</span></h2>
-<p>Перелік послуг, доступних для громадян</p>
-<a href=/g2c>And more</a>
-</figcaption>
-</figure><br>
-</div>
-<div class=col-md-6>
-<figure class=opacity>
-<div id=rockit>
-<link><a href=/g2g>
-<picture>
-<source srcset=/img/btn_2_320px.jpg media=(max-width:450px)>
-<img class="bottom img-rounded" src=/img/btn_2_1.jpg alt="Моє місто. G2G" />
-<img class="top img-rounded" src=/img/btn_2.jpg alt="Моє місто. G2G" />
-</picture>
-</a>
-</div>
-<figcaption>
-<h2>Моє місто. <span>G2G</span></h2>
-<p>Послуги та сервіси для держслубовців</p>
-<a href=/g2g>And more</a>
-</figcaption>
-</figure>
-</div>
-</div>
-<div class=row>
-<br>
-<div class=col-md-6>
-<figure class=opacity>
-<div id=rockit>
-<link><a href=/g2b>
-<picture>
-<source srcset=/img/btn_3_320px.jpg media=(max-width:450px)>
-<img class="bottom img-rounded" src=/img/btn_3_1.jpg alt="Підприємцям. G2B" />
-<img class="top img-rounded" src=/img/btn_3.jpg alt="Підприємцям. G2B" />
-</picture>
-</a>
-</div>
-<figcaption>
-<h2>Підприємцям. <span>G2B</span></h2>
-<p>Сервіси та взаємодія між бізнесом та владою</p>
-<a href=/g2b>And more</a>
-</figcaption>
-</figure><br>
-</div>
-<div class=col-md-6>
-<figure class=opacity>
-<div id=rockit>
-<link><a href=/all>
-<picture>
-<source srcset=/img/btn_all_320px.jpg media=(max-width:450px)>
-<img class="bottom img-rounded" src=/img/btn_all_1.jpg alt="Усі послуги" />
-<img class="top img-rounded" src=/img/btn_all.jpg alt="Усі послуги" />
-</picture>
-</a>
-</div>
-<figcaption>
-<h2>Усі <span>послуги.</span></h2>
-<p>Перелік усіх доступних послуг та сервісів</p>
-<a href=/all>And more</a>
-</figcaption>
-</figure>
-</div>
-</div>
+
+<div class="container">
 <div class=page-header>
+<h1><b>Форум</b></h1>
+
+<!--DISQUS_forum-->
+<div id="disqus_thread"></div>
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//smartcity-mlt-gov-ua-1.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<!--DISQUS_forum-->
+
 </div>
-<h1><p class=text-primary style=text-align:center><b>Ваші найбільш вживані сервіси SmartCity.</b></p></h1>
-<div class=list-group>
-<a href=/g2c/socialny_sahist class=list-group-item>Калькулятор субсидій/інформація про статус</a>
-<a href=/g2b/derzhavny_zakupivli class=list-group-item>Офіційні закупівлі</a>
-<a href=/g2g/energo-efficiency class=list-group-item>Муніципальне майно. Енергетика</a>
-<a href=/g2g/stan_dorig class=list-group-item>Статус доріг міста</a>
-<a href=/g2c/cherga_v_dnz class=list-group-item>Черга в ДНЗ</a>
-<a href=/404 class=list-group-item>Оформлення паспорта прив’язки тимчасової споруди для провадження підприємницької діяльності</a>
+<!--DISQUS_counter--><a href="http://smartcity.mlt.gov.ua/forum#disqus_thread"></a><!--DISQUS_counter-->
 </div>
+
+<div class="container">
 <div class=page-header>
 </div>
 <footer>
@@ -198,5 +143,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </footer>
 </div>
+<!--DISQUS_counter-->
+<script id="dsq-count-scr" src="//smartcity-mlt-gov-ua-1.disqus.com/count.js" async></script>
+<!--DISQUS_counter-->
 </body>
 </html>
