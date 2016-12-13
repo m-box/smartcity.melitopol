@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang=en>
 <head>
 <meta charset="UTF-8">
@@ -66,7 +66,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 <a href=/><img src=/img/logo.png alt="Кабінет електроних сервісів: SmartMelitopol" style="float:left;width:80px;height:80px;margin:10px 10px 0 0"/></a>
-<h3><p class=text-primary><b>SmartCity. <br>Кабінет електронних сервісів</b></p></h3>
+<h4><p class=text-primary><b>SmartCity. <br>Кабінет електронних сервісів</b></p></h4>
 </div>
 </div>
 </div>
@@ -78,7 +78,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><a href=/>Проекти <span class=badge>42</span></a></li>
 <li><a href=/news>Новини <span class=badge>0</span></a></li>
 <li><a href=http://www.mlt.gov.ua>Міська влада <span class=badge>1</span></a></li>
-<li class=active><a href=/faq>Допомога </a></li>
+<li><a href=/faq>Допомога </a></li>
 <form class="navbar-form navbar-left pull-right" role=search>
 <div class=form-group>
 <input type=text class=form-control placeholder="Пошук сервісів">
@@ -87,57 +87,74 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </form>
 </ul>
 </div>
+<div class="alert alert-dismissible alert-success">
+<button type=button class=close data-dismiss=alert>&times;</button>
+<strong>Кабінет платника</strong> має стати розрахунковим центром для користувачів, дозволить зекономити час та переглядати статистику сплат за комунальні послуги. <a href=# class=alert-link>На цей час сервіс ще не узгоджено.</a>.
+</div>
+</div>
 
-
+<div class="container">
 <ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" href="#home">Електоенергія</a></li>
-  <li><a data-toggle="tab" href="#menu1">Вода</a></li>
-  <li><a data-toggle="tab" href="#menu2">Газ</a></li>
+  <li class="active"><a data-toggle="tab" href="#cabinetpl">Кабінет платника</a></li>
+  <li><a data-toggle="tab" href="#calcposl">Калькулятор витрат</a></li>  
 </ul>
 
 <div class="tab-content">
-  <div id="home" class="tab-pane fade in active">
-    <h3>HOME</h3>
-    <div class="form-group">
+  <div id="cabinetpl" class="tab-pane fade in active" style="min-height: 600px">
+  <table>
+  <tr><td><h3>Перелік зовнішніх кабінетів</h3></td></tr>
+	<tr style="height: 50px;"><td><button type="button" class="btn btn-primary disabled">Електроенергія</button></td></tr>
+	<tr style="height: 50px;"><td><button type="button" class="btn btn-primary disabled">Вивіз сміття</button></td></tr>
+	<tr style="height: 50px;"><td><button type="button" class="btn btn-primary disabled">Обслуговування будинків</button></td></tr>
+	<tr style="height: 50px;"><td><a class="button btn-lg btn-danger" href="https://gasolina-online.com" style="text-decoration: none;">Газопостачання</a></td></tr>
+	<tr style="height: 50px;"><td><a class="button btn-lg btn-primary" href="http://www.melvoda.com.ua" style="text-decoration: none;">Водопостачання</a></td></tr>
+  </table>
+  </div>
+  <div id="calcposl" class="tab-pane fade">
+  	
+  	<div class="col-sm-5" style="min-height: 600px">
+  		<h3>Як ми витрачаємо свій час?</h3>
+  		<ul>Для того щоб сплатити за спожиті комунальні полуги можна:<br>
+  		<li>отримати платіжні квитанції;</li>
+  		<li>зняти готівку в банкоматі;</li>
+  		<li>поїхати після роботи в найближче поштове відділення або до банку;</li>
+  		<li>відстояти чергу;</li>
+  		<li>розрахуватись по квитанції;</li>
+  		<li>повернутись додому.</li>
+  		Або просто зайти на сайт платника податків та зробити все за кілька секунд не виходячи з дому, й не маючи ніяких турбот та негативу.<br>
+  		То як ми витрачаємо час визначає якість нашого життя.<br>
+  		<b>Вибір за Вами.</b></ul>
+  	</div>
+
+	<div class="col-sm-7" style="min-height: 600px">
+    <h3>Електроенергія</h3>
+    <b>1. Оберіть тип домогосподарства:</b><br>
     <input type="radio" name="type" value=norm>Житловий будинок <br> 
-    <input type="radio" name="type" value=lgot>
-Багатодітні, прийомні сім'ї, дитячі будинки сімейного типу та гуртожитки<br>
-	<input type="radio" name="type" value=business>
-Для компаній<br>
- 	<label >Значення</label>
-  <input type="number" class="form-control" id="electro"><br>
-  <button type="button" class="btn btn-primary" onclick="electro()">Розрахувати</button><br>
-  <strong id="result_electro">Заповніть комірки</strong>
-  </div>
-  </div>
-  <div id="menu1" class="tab-pane fade">
+    <input type="radio" name="type" value=lgot>Багатодітні, прийомні сім'ї, дитячі будинки сімейного типу та гуртожитки<br>
+  	<input type="radio" name="type" value=business>Для компаній<br>
+ 	<label>2. Введіть кількість витрачених за період КВт</label>
+    <input type="number" class="form-control" id="electro"><br>
+    <button type="button" class="btn btn-primary" onclick="electro()">Розрахувати</button><br>
+    <strong id="result_electro">Заповніть комірки</strong>
+    
     <h3>Вода</h3>
-    <div class="form-group">
+    <label>Введіть кількість кубічних метрів води, витрачених за період</label>
     <input type="number" class="form-control" id="water"><br>
     <button type="button" class="btn btn-primary" onclick="water()">Розрахувати</button><br>
-  <strong id="result_water">Заповніть комірки</strong>
-  </div>
-  </div>
-  <div id="menu2" class="tab-pane fade">
+    <strong id="result_water">Заповніть комірки</strong>
+    
     <h3>Газ</h3>
-    <div class="form-group">
+    <label>Введіть кількість кубічних метрів газу</label>
     <input type="number" class="form-control" id="gaz"><br>
-   <button type="button" class="btn btn-primary" onclick="gaz()">Розрахувати</button><br>
-  <strong id="result_gaz">Заповніть комірки</strong>
-  </div>
+    <button type="button" class="btn btn-primary" onclick="gaz()">Розрахувати</button><br>
+    <strong id="result_gaz">Заповніть комірки</strong>
+	</div>
+
   </div>
 </div>
-
-
-
-<div class=list-group>
-<a href=/g2c/socialny_sahist class=list-group-item>Калькулятор субсидій/інформація про статус</a>
-<a href=/g2b/derzhavny_zakupivli class=list-group-item>Офіційні закупівлі</a>
-<a href=/g2g/energo-efficiency class=list-group-item>Муніципальне майно. Енергетика</a>
-<a href=/g2g/stan_dorig class=list-group-item>Статус доріг міста</a>
-<a href=/g2c/cherga_v_dnz class=list-group-item>Черга в ДНЗ</a>
-<a href=/404 class=list-group-item>Оформлення паспорта прив’язки тимчасової споруди для провадження підприємницької діяльності</a>
 </div>
+
+<div class="container">
 <div class=page-header>
 </div>
 <footer>

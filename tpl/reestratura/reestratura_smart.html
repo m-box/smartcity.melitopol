@@ -72,21 +72,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<h3>ЗАПИС НА ПРИЙОМ</h3><br>		
 	</div>
 	<div class=modal-body>
+			<table class="">
+			<tr style="text-align: center; height: 50px; background-color: #E5E5E5"><td><b>Лікар</b></td><td><b>Адреса</b></td><td><b>Дата і час</b></td></tr>
+			<tr style="text-align: center; height: 50px; background-color: #E5E5E5"><td></td><td></td><td></td></tr>
 			
-			<div class="col-sm-4" style="text-align: center; height: 50px;"><b>Лікар</b></div>
-			<div class="col-sm-4" style="text-align: center; height: 50px;"><b>Адреса</b></div>
-			<div class="col-sm-4" style="text-align: center; height: 50px;"><b>Дата і час</b></div>
-			<div class="col-sm-4"><b>Прізвище</b><input class=form-control placeholder="Прізвище"></div>
-			<div class="col-sm-4"><b>Ім'я</b><input class=form-control placeholder="Ім'я"></div>
-			<div class="col-sm-4"><b>По батькові</b><input class=form-control placeholder="По-батькові"></div>		
-			<div class="col-sm-12"><b>Номер мобільного телефону</b><input class=form-control placeholder="Телефон"></div>
-			<div class="col-sm-12"><b>E-mail</b><input class=form-control placeholder="Пошта"></div>
-			<div class="col-sm-12"><b>Дата народження</b></div>
-			<div class="col-sm-4"><input class=form-control placeholder="День"></div>
-			<div class="col-sm-4"><input class=form-control placeholder="Місяць"></div>
-			<div class="col-sm-4"><input class=form-control placeholder="Рік"></div>		
-			<div class="col-sm-12"><b>Стать</b><input type="radio" name="sex" value="man"> чоловіча<input type="radio" name="sex" value="woman"> жіноча</div>
+			<tr style="height: 50px;">
+			<td><b>Прізвище</b><input class=form-control placeholder="Прізвище"></td>
+			<td><b>Ім'я</b><input class=form-control placeholder="Ім'я"></td>
+			<td><b>По батькові</b><input class=form-control placeholder="По-батькові"></td>
+			</tr>			
 			
+			<tr><th colspan="3"><b>Номер мобільного телефону</b><input class=form-control placeholder="Телефон"></th></tr>			
+
+			<tr><th colspan="3"><b>E-mail</b><input class=form-control placeholder="Пошта"></th></tr>			
+						
+			<tr><td colspan="3"><b>Дата народження</b></td></tr>
+			<tr>
+			<td><input class=form-control placeholder="День"></td>
+			<td><input class=form-control placeholder="Місяць"></td>
+			<td><input class=form-control placeholder="Рік"></td>
+			</tr>
+
+			<tr><td colspan="3"><b>Стать</b></td></tr>			
+			<tr><td colspan="3"><input type="radio" name="sex" value="man"> чоловіча<input type="radio" name="sex" value="woman"> жіноча</td></tr>
+
+			</table>
+
 	</div>
 	<div class=modal-footer>
 			<a class="btn btn-success" href=# data-toggle=modal data-target=#myReestratura>ЗАПИСАТИСЯ НА ПРИЙОМ</a>
