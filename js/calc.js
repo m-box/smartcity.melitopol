@@ -45,5 +45,5 @@ function gaz(){
 	var tarif_gaz = 6.879;
 	var gaz = $("#gaz").val()
 	result_gaz = parseInt(gaz) * tarif_gaz
-	 $("#result_gaz").html('Орієнтовна вартість <br>' + result_gaz)
+	 $("#result_gaz").html('Орієнтовна вартість <br>' + result_gaz.toFixed(2))
 }
