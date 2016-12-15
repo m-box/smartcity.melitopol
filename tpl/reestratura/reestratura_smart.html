@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang=en>
 <head>
 <meta charset="UTF-8">
@@ -13,7 +13,8 @@
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/log_user.js"></script>
-<script type="text/javascript"  src= "js/JS_req.js"></script>
+<script src="/js/calendar.js"></script>
+<script type="text/javascript"  src= "/js/JS_req.js"></script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -22,7 +23,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TB2T2L');</script>
 <!-- End Google Tag Manager -->
 </head>
-<body onLoad="login_if();">
+<body onLoad="login_if(); calend();">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TB2T2L"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -72,19 +73,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<h3>ЗАПИС НА ПРИЙОМ</h3><br>		
 	</div>
 	<div class=modal-body>
-			<table class="">
-			<tr style="text-align: center; height: 50px; background-color: #E5E5E5"><td><b>Лікар</b></td><td><b>Адреса</b></td><td><b>Дата і час</b></td></tr>
-			<tr style="text-align: center; height: 50px; background-color: #E5E5E5"><td></td><td></td><td></td></tr>
+			<table class="" >
+			<tbody id="inmodal">
+			<tr  style="text-align: center; height: 50px; background-color: #E5E5E5"><td><b>Лікар</b></td><td><b>Спеціалізація</b></td><td><b>Дата і час</b></td></tr>
+			</tbody>
 			
 			<tr style="height: 50px;">
-			<td><b>Прізвище</b><input class=form-control placeholder="Прізвище"></td>
-			<td><b>Ім'я</b><input class=form-control placeholder="Ім'я"></td>
-			<td><b>По батькові</b><input class=form-control placeholder="По-батькові"></td>
+			<td><b>Прізвище</b><input class=form-control placeholder="Прізвище" id="surname_pat" value=""></td>
+			<td><b>Ім'я</b><input class=form-control placeholder="Ім'я" id="name_pat" value=""></td>
+			<td><b>По батькові</b><input class=form-control placeholder="По-батькові" id="fathername_pat" value=""></td>
 			</tr>			
 			
-			<tr><th colspan="3"><b>Номер мобільного телефону</b><input class=form-control placeholder="Телефон"></th></tr>			
+			<tr><th colspan="3"><b>Номер мобільного телефону</b><input class=form-control placeholder="Телефон" id="number_pat" value=""></th></tr>			
 
-			<tr><th colspan="3"><b>E-mail</b><input class=form-control placeholder="Пошта"></th></tr>			
+			<tr><th colspan="3"><b>E-mail</b><input class=form-control placeholder="Пошта" id="email_pat" value=""></th></tr>			
 						
 			<tr><td colspan="3"><b>Дата народження</b></td></tr>
 			<tr>
@@ -94,13 +96,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</tr>
 
 			<tr><td colspan="3"><b>Стать</b></td></tr>			
-			<tr><td colspan="3"><input type="radio" name="sex" value="man"> чоловіча<input type="radio" name="sex" value="woman"> жіноча</td></tr>
+			<tr><td colspan="3"><input type="radio" name="sex" value="man"> чоловіча<input type="radio" name="sex" value="woman" id="gender_pat" value=""> жіноча</td></tr>
 
 			</table>
 
 	</div>
 	<div class=modal-footer>
-			<a class="btn btn-success" href=# data-toggle=modal data-target=#myReestratura>ЗАПИСАТИСЯ НА ПРИЙОМ</a>
+			<a class="btn btn-success" href=# data-toggle=modal data-target=#myReestratura onclick="patient();">ЗАПИСАТИСЯ НА ПРИЙОМ</a>
 	</div>
 	</div>
 </div>
