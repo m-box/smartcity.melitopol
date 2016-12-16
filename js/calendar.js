@@ -1,4 +1,5 @@
 function calend() {
+
 	var now = new Date();
 	var day = now.getDate()
 	var month = ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень","Вересень","Жовтень","Листопад", "Грудень"][ now.getMonth()]
@@ -27,16 +28,15 @@ function calend() {
 	var date_5 = String((now.getDate()+5)) +' '+ (now.getMonth()+1) +' '+ now.getFullYear()
 	var date_6 = String((now.getDate()+6)) +' '+ (now.getMonth()+1) +' '+ now.getFullYear()
 
-
 	$('#table').html('<table class="table table-responsive table-striped table-bordered" width="100%" ><thead><tr class="info"> <th>Лікар</th><th>Кабінет</th><th>'+ weekday0+' '+ date0+' '+month +'</th><th>'+ weekday1+' '+ date1+' '+month +'</th><th>'+ weekday2+' '+ date2+' '+month +'</th><th>'+ weekday3+' '+ date3+' '+month +'</th><th>'+ weekday4+' '+ date4+' '+month +'</th><th>'+ weekday5+' '+ date5+' '+month +'</th><th>'+ weekday6+' '+ date6+' '+month +'</th></tr></thead></table>')
 
 	$.getJSON("doctors.json", function(data) {
 	for (i=0; i<20; i++){
-			
-		//freetime = data[i].priem[datetd[0]]
 		lic_name = data[i].doctor
 		cab_no = data[i].cab
 		prof = data[i].prof
+		if (date3 !== data[i].priem[date_3]||date4 !== data[i].priem[date_4]||date5 !== data[i].priem[date_5]||date6 !== data[i].priem[date_6]) {
+
 		priemtd = data[i].priem[datetd].talons
 		priem_1 = data[i].priem[date_1].talons
 		priem_2 = data[i].priem[date_2].talons
@@ -44,15 +44,22 @@ function calend() {
 		priem_4 = data[i].priem[date_4].talons
 		priem_5 = data[i].priem[date_5].talons
 		priem_6 = data[i].priem[date_6].talons
+
 		priemtd = parseInt(priemtd)
 		priem_1 = parseInt(priem_1)
 		priem_2 = parseInt(priem_2)
 		priem_3 = parseInt(priem_3)
 		priem_4 = parseInt(priem_4)
 		priem_5 = parseInt(priem_5)
-		priem_6 = parseInt(priem_6) 
+		priem_6 = parseInt(priem_6)
+		freetime = data[i].priem[datetd][i].status
+		ch = 0
+		while(freetime == "false"){
+			freetime = data[i].priem[datetd][i+1].status
+			if (freetime == "free") break
+		}
 
-			if(priemtd<6){ ch_td = 6-priemtd;  talonstd =  'Вільно '+ ch_td +' талонів '; colortd = "green"} else {colortd="red"; talonstd="Вільних талонів немає"}
+			if(priemtd<6){ ch_td = 6-priemtd;  talonstd =  'Вільно '+ch_td +' талонів '; colortd = "green"} else{colortd="red"; talonstd="Вільних талонів немає"}
 			if (priem_1<6){ ch_1 = 6-priem_1;  talons_1 =  'Вільно '+ ch_1 +' талонів '; color_1 = "green"} else{color_1="red"; talons_1="Вільних талонів немає"}
 			if (priem_2<6){ ch_2 = 6-priem_2;  talons_2 =  'Вільно '+ ch_2 +' талонів '; color_2 = "green"} else{color_2="red"; talons_2="Вільних талонів немає"}
 			if (priem_3<6){ ch_3 = 6-priem_3;  talons_3 =  'Вільно '+ ch_3 +' талонів '; color_3 = "green"} else{color_3="red"; talons_3="Вільних талонів немає"}
@@ -61,11 +68,15 @@ function calend() {
 			if (priem_6<6){ ch_6 = 6-priem_6;  talons_6 =  'Вільно '+ ch_6 +' талонів '; color_6 = "green"} else{color_6="red"; talons_6="Вільних талонів немає"}
 
 		$('#table').append('<tr><td>'+lic_name+'</td><td>'+cab_no+'</td><td style="background:'+colortd+';">'+talonstd+'</td><td style="background:'+color_1+';">'+talons_1+'</td><td style="background:'+color_2+';">'+talons_2+'</td><td style="background:'+color_3+';">'+talons_3+'</td><td style="background:'+color_4+';">'+talons_4+'</td><td style="background:'+color_5+';">'+talons_5+'</td><td style="background:'+color_6+';">'+talons_6+'</td></tr>')
-		$('#inmodal').append('<tr style="text-align: center; height: 50px; background-color: #E5E5E5"><td>'+lic_name+'</td><td>'+prof+'</td><td></td></tr>')
-    }
- 
+		$('#inmodal').append('<tr style="text-align: center; height: 50px; background-color: #E5E5E5"><td>'+lic_name+'</td><td>'+prof+'</td><td>'+freetime+'</td></tr>')
+	}
+	else{
+		$('#table').append('<tr><td>lo'+lic_name+'</td><td>'+cab_no+'</td><td>Помилка дати</td><td>Помилка дати</td><td>Помилка дати</td><td>Помилка дати</td><td>Помилка дати</td><td>Помилака дати</td><td>Помилка дати</td></tr>')
+	}}
+
 });
 	}
+
 
 function patient (){
 	var name_pat = $("#name_pat").val();
