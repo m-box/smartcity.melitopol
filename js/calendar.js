@@ -52,23 +52,27 @@ function calend() {
 		priem_4 = parseInt(priem_4)
 		priem_5 = parseInt(priem_5)
 		priem_6 = parseInt(priem_6)
-		freetime = data[i].priem[datetd][i].status
-		ch = 0
-		while(freetime == "false"){
-			freetime = data[i].priem[datetd][i+1].status
-			if (freetime == "free") break
+		timefree = []
+		for (j=0; j < 5; j++) {
+			freetime = data[i].priem[datetd][j].status
+			if (freetime !== "full") {
+			timefree[j] = data[i].priem[datetd][j].time	
 		}
+}
 
-			if(priemtd<6){ ch_td = 6-priemtd;  talonstd =  'Вільно '+ch_td +' талонів '; colortd = "green"} else{colortd="red"; talonstd="Вільних талонів немає"}
-			if (priem_1<6){ ch_1 = 6-priem_1;  talons_1 =  'Вільно '+ ch_1 +' талонів '; color_1 = "green"} else{color_1="red"; talons_1="Вільних талонів немає"}
-			if (priem_2<6){ ch_2 = 6-priem_2;  talons_2 =  'Вільно '+ ch_2 +' талонів '; color_2 = "green"} else{color_2="red"; talons_2="Вільних талонів немає"}
-			if (priem_3<6){ ch_3 = 6-priem_3;  talons_3 =  'Вільно '+ ch_3 +' талонів '; color_3 = "green"} else{color_3="red"; talons_3="Вільних талонів немає"}
-			if (priem_4<6){ ch_4 = 6-priem_4;  talons_4 =  'Вільно '+ ch_4 +' талонів '; color_4 = "green"} else{color_4="red"; talons_4="Вільних талонів немає"}
-			if (priem_5<6){ ch_5 = 6-priem_5;  talons_5 =  'Вільно '+ ch_5 +' талонів '; color_5 = "green"} else{color_5="red"; talons_5="Вільних талонів немає"}
-			if (priem_6<6){ ch_6 = 6-priem_6;  talons_6 =  'Вільно '+ ch_6 +' талонів '; color_6 = "green"} else{color_6="red"; talons_6="Вільних талонів немає"}
-
+		if(priemtd<6){ ch_td = 6-priemtd;  talonstd =  'Вільно '+ch_td +' талонів '; colortd = "green"} else{colortd="red"; talonstd="Вільних талонів немає"}
+		if (priem_1<6){ ch_1 = 6-priem_1;  talons_1 =  'Вільно '+ ch_1 +' талонів '; color_1 = "green"} else{color_1="red"; talons_1="Вільних талонів немає"}
+		if (priem_2<6){ ch_2 = 6-priem_2;  talons_2 =  'Вільно '+ ch_2 +' талонів '; color_2 = "green"} else{color_2="red"; talons_2="Вільних талонів немає"}
+		if (priem_3<6){ ch_3 = 6-priem_3;  talons_3 =  'Вільно '+ ch_3 +' талонів '; color_3 = "green"} else{color_3="red"; talons_3="Вільних талонів немає"}
+		if (priem_4<6){ ch_4 = 6-priem_4;  talons_4 =  'Вільно '+ ch_4 +' талонів '; color_4 = "green"} else{color_4="red"; talons_4="Вільних талонів немає"}
+		if (priem_5<6){ ch_5 = 6-priem_5;  talons_5 =  'Вільно '+ ch_5 +' талонів '; color_5 = "green"} else{color_5="red"; talons_5="Вільних талонів немає"}
+		if (priem_6<6){ ch_6 = 6-priem_6;  talons_6 =  'Вільно '+ ch_6 +' талонів '; color_6 = "green"} else{color_6="red"; talons_6="Вільних талонів немає"}
+		anotherval = []
+		for (k=ch_td; k<5;k++) {
+			anotherval[k] = '<option>'+timefree[k]+'</option>'
+		}
 		$('#table').append('<tr><td>'+lic_name+'</td><td>'+cab_no+'</td><td style="background:'+colortd+';">'+talonstd+'</td><td style="background:'+color_1+';">'+talons_1+'</td><td style="background:'+color_2+';">'+talons_2+'</td><td style="background:'+color_3+';">'+talons_3+'</td><td style="background:'+color_4+';">'+talons_4+'</td><td style="background:'+color_5+';">'+talons_5+'</td><td style="background:'+color_6+';">'+talons_6+'</td></tr>')
-		$('#inmodal').append('<tr style="text-align: center; height: 50px; background-color: #E5E5E5"><td>'+lic_name+'</td><td>'+prof+'</td><td>'+freetime+'</td></tr>')
+		$('#inmodal').append('<tr style="text-align: center; height: 50px; background-color: #E5E5E5"><td><label><input type="radio" name="optradio">'+lic_name+'</label></td><td>'+prof+'</td><td>  <select class="form-control" id="sel1">'+anotherval+'</select></td></tr>')    
 	}
 	else{
 		$('#table').append('<tr><td>lo'+lic_name+'</td><td>'+cab_no+'</td><td>Помилка дати</td><td>Помилка дати</td><td>Помилка дати</td><td>Помилка дати</td><td>Помилка дати</td><td>Помилака дати</td><td>Помилка дати</td></tr>')

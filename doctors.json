@@ -9,15 +9,15 @@
         "16 12 2016":{
           "talons":"4",
           "0":{
-            "status" :"free",
+            "status" :"full",
             "patient" :""
             },
           "1":{
-            "status":"free",
+            "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
-            "status":"free",
+            "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
@@ -88,28 +88,34 @@
           }
         },
         "19 12 2016":{
-          "talons":"4",
+          "talons":"5",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
-            "status":"full",
+            "time":"08:30-09:00",
+            "status":"free",
             "patient": "Осипов П.А."
           },
           "2":{
-            "status":"full",
+            "time":"09:30-10:00",
+            "status":"free",
             "patient":"Молчанов А.Д."
           },
           "3":{
-            "status":"full",
+            "time":"10:00-10:30",
+            "status":"free",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
           }
@@ -117,242 +123,296 @@
         "20 12 2016":{
           "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
           }
         },
         "21 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "22 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "23 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "24 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "25 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "26 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "27 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "28 12 2016":{
           "talons":"6",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
         }
@@ -360,7 +420,7 @@
       }
     },
       {
-    "doctor": "Петронко Л. Б.",
+    "doctor": "Петренко Л. І.",
     "cab":"14",
     "prof":"Стоматолог",
      "priem":{
@@ -446,244 +506,298 @@
         }
         },
         "19 12 2016":{
-          "talons":"1",
+          "talons":"3",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
-            "status":"full",
+            "time":"10:00-10:30",
+            "status":"free",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "20 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
-            "status":"full",
+            "time":"10:00-10:30",
+            "status":"free",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "21 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "22 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "23 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "24 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "25 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "26 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "27 12 2016":{
           "talons":"1",
           "0":{
+             "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+             "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+             "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+             "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+             "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+             "time":"11:00-11:30",
             "status":"free",
             "patient":""
         }
@@ -695,33 +809,6 @@
     "prof":"Хіруг",
      "priem":{
         "16 12 2016":{
-          "talons":"1",
-          "0":{
-            "status" : "full",
-            "patient" :"Ігнатьєв Ф.А."
-            },
-          "1":{
-            "status":"full",
-            "patient": "Осипов П.А."
-          },
-          "2":{
-            "status":"full",
-            "patient":"Молчанов А.Д."
-          },
-          "3":{
-            "status":"full",
-            "patient":"Сафонов І.Д."
-        },
-          "4":{
-            "status":"free",
-            "patient":""
-        },
-          "5":{
-            "status":"free",
-            "patient":""
-        }
-        },
-        "17 12 2016":{
           "talons":"1",
           "0":{
             "status" : "full",
@@ -802,7 +889,7 @@
             "patient":""
         }
         },
-        "19 12 2016":{
+        "18 12 2016":{
           "talons":"1",
           "0":{
             "status" : "full",
@@ -828,195 +915,270 @@
             "status":"free",
             "patient":""
         }
+        },
+        "19 12 2016":{
+          "talons":"2",
+          "0":{
+            "time":"08:00-08:30",
+            "status" : "full",
+            "patient" :"Ігнатьєв Ф.А."
+            },
+          "1":{
+            "time":"08:30-09:00",
+            "status":"full",
+            "patient": "Осипов П.А."
+          },
+          "2":{
+            "time":"09:30-10:00",
+            "status":"free",
+            "patient":"Молчанов А.Д."
+          },
+          "3":{
+            "time":"10:00-10:30",
+            "status":"free",
+            "patient":"Сафонов І.Д."
+        },
+          "4":{
+            "time":"10:30-11:00",
+            "status":"free",
+            "patient":""
+        },
+          "5":{
+            "time":"11:00-11:30",
+            "status":"free",
+            "patient":""
+          }
         },
         "20 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "21 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "22 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "23 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "24 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "25 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         },
         "26 12 2016":{
-          "talons":"1",
+          "talons":"4",
           "0":{
+            "time":"08:00-08:30",
             "status" : "full",
             "patient" :"Ігнатьєв Ф.А."
             },
           "1":{
+            "time":"08:30-09:00",
             "status":"full",
             "patient": "Осипов П.А."
           },
           "2":{
+            "time":"09:30-10:00",
             "status":"full",
             "patient":"Молчанов А.Д."
           },
           "3":{
+            "time":"10:00-10:30",
             "status":"full",
             "patient":"Сафонов І.Д."
         },
           "4":{
+            "time":"10:30-11:00",
             "status":"free",
             "patient":""
         },
           "5":{
+            "time":"11:00-11:30",
             "status":"free",
             "patient":""
-        }
+          }
         }
     }
       } 
