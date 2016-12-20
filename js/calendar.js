@@ -30,7 +30,7 @@ function calend() {
 
 	$('#table').html('<table class="table table-responsive table-striped table-bordered" width="100%" ><thead><tr class="info"> <th>Лікар</th><th>Кабінет</th><th>'+ weekday0+' '+ date0+' '+month +'</th><th>'+ weekday1+' '+ date1+' '+month +'</th><th>'+ weekday2+' '+ date2+' '+month +'</th><th>'+ weekday3+' '+ date3+' '+month +'</th><th>'+ weekday4+' '+ date4+' '+month +'</th><th>'+ weekday5+' '+ date5+' '+month +'</th><th>'+ weekday6+' '+ date6+' '+month +'</th></tr></thead></table>')
 
-	$.getJSON("doctors.json", function(data) {
+	$.getJSON("/controllers/doctors.json", function(data) {
 	for (i=0; i<20; i++){
 		lic_name = data[i].doctor
 		cab_no = data[i].cab

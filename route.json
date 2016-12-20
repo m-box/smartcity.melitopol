@@ -25,7 +25,7 @@
 "23":{"arg_str":"tpl/energo/energo-face.html",			"route_url":"g2g/energo-face",					"route_type":"template_page"},
 "24":{"arg_str":"tpl/energo/energoch.html",				"route_url":"g2g/energoch",						"route_type":"template_page"},
 "25":{"arg_str":"tpl/transport/transport_online.html",	"route_url":"g2c/online-route",					"route_type":"template_page"},
-"26":{"arg_str":"tpl/reestratura/reestratura.html",		"route_url":"g2c/reestratura",					"route_type":"template_page"},
+"26":{"arg_str":"tpl/reestratura/reestratura_smart.html","route_url":"g2c/reestratura",					"route_type":"template_page"},
 "27":{"arg_str":"tpl/transport/transport.html",			"route_url":"g2c/routes",						"route_type":"template_page"},
 "28":{"arg_str":"tpl/cabinet/calculator.html",			"route_url":"g2c/cabinet_platnika",				"route_type":"template_page"},
 "29":{"arg_str":"controllers/energo/energoch.php", 		"route_url":"g2g/energo-efficiency", 			"route_type":"template_page"},
