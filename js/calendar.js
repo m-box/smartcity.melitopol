@@ -60,13 +60,13 @@ function calend() {
 		
 }
 
-		if(priemtd<6){ ch_td = 6-priemtd;  talonstd =  'Вільно '+priemtd +' талонів '; colortd = "green"} else{colortd="red"; talonstd="Вільних талонів немає"}
-		if (priem_1<6){ ch_1 = 6-priem_1;  talons_1 =  'Вільно '+ priem_1 +' талонів '; color_1 = "green"} else{color_1="red"; talons_1="Вільних талонів немає"}
-		if (priem_2<6){ ch_2 = 6-priem_2;  talons_2 =  'Вільно '+ priem_2 +' талонів '; color_2 = "green"} else{color_2="red"; talons_2="Вільних талонів немає"}
-		if (priem_3<6){ ch_3 = 6-priem_3;  talons_3 =  'Вільно '+ priem_3 +' талонів '; color_3 = "green"} else{color_3="red"; talons_3="Вільних талонів немає"}
-		if (priem_4<6){ ch_4 = 6-priem_4;  talons_4 =  'Вільно '+ priem_4 +' талонів '; color_4 = "green"} else{color_4="red"; talons_4="Вільних талонів немає"}
-		if (priem_5<6){ ch_5 = 6-priem_5;  talons_5 =  'Вільно '+ priem_5 +' талонів '; color_5 = "green"} else{color_5="red"; talons_5="Вільних талонів немає"}
-		if (priem_6<6){ ch_6 = 6-priem_6;  talons_6 =  'Вільно '+ priem_6 +' талонів '; color_6 = "green"} else{color_6="red"; talons_6="Вільних талонів немає"}
+		if(priemtd!=0){ ch_td = priemtd;  talonstd =  'Вільно '+priemtd +' талонів '; colortd = "#5cb85c"} else if (priemtd==0){colortd="#d9534f"; talonstd="Вільних талонів немає"}
+		if ( priem_1!=0){ ch_1 = priem_1;  talons_1 =  'Вільно '+ priem_1 +' талонів '; color_1 = "#5cb85c"} else if (priem_1==0) {color_1="#d9534f"; talons_1="Вільних талонів немає"}
+		if (priem_2!=0){ ch_2 = priem_2;  talons_2 =  'Вільно '+ priem_2 +' талонів '; color_2 = "#5cb85c"} else if (priem_2==0) {color_2="#d9534f"; talons_2="Вільних талонів немає"}
+		if (priem_3!=0){ ch_3 = priem_3;  talons_3 =  'Вільно '+ priem_3 +' талонів '; color_3 = "#5cb85c"} else if (priem_3==0) {color_3="#d9534f"; talons_3="Вільних талонів немає"}
+		if (priem_4!=0){ ch_4 = priem_4;  talons_4 =  'Вільно '+ priem_4 +' талонів '; color_4 = "#5cb85c"} else if (priem_4==0) {color_4="#d9534f"; talons_4="Вільних талонів немає"}
+		if (priem_5!=0){ ch_5 = priem_5;  talons_5 =  'Вільно '+ priem_5 +' талонів '; color_5 = "#5cb85c"} else if (priem_5==0) {color_5="#d9534f"; talons_5="Вільних талонів немає"}
+		if (priem_6!=0){ ch_6 = priem_6;  talons_6 =  'Вільно '+ priem_6 +' талонів '; color_6 = "#5cb85c"} else if (priem_6==0) {color_6="#d9534f"; talons_6="Вільних талонів немає"}
 		anotherval = []
 		for (k=ch_td; k<6;k++) {
 			anotherval[k] = '<option>'+timefree[k]+'</option>'
