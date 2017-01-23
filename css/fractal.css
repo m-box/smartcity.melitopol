@@ -27,6 +27,13 @@
 #rockit img.top:hover {
   opacity:0;
 }
+.sheader1 {
+  position: absolute; 
+  top: 50px; 
+  left: 50px; 
+  width: 100%; 
+  text-shadow: 3px 3px 5px black;
+}
 figure {
 	display: block;
 	position: relative;
@@ -81,7 +88,7 @@ figure figcaption > a {
 	transition: opacity 0.5s ease-in-out;
 }
 .opacity:hover figcaption {
-	opacity: 0.8;
+	opacity: 0.6;
 }
 .valids	{
 	margin-top: -15px;

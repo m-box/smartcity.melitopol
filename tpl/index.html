@@ -10,6 +10,7 @@
 <title >SmartCity.Melitopol. Кабінет електронних сервісів</title>
 <link href=/css/fractal.css rel=stylesheet>
 <link href=/css/bootstrap.min.css rel=stylesheet>
+<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
 <script src=/js/jquery.min.js></script>
 <script src=/js/bootstrap.min.js></script>
 <script src=/js/log_user.js></script>
@@ -21,14 +22,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TB2T2L');</script>
 <!-- End Google Tag Manager -->
+<style>
+	body #moto {padding: 100px; color: #fff; background-image: url("images/g2bbackground.jpg"); height: 500px; background-size: cover; background-attachment: fixed;}	
+</style>
 </head>
-<body onLoad="login_if();" style="background-image: url(/images/snow.gif);">
+<body onLoad="login_if();">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TB2T2L"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div id=scheader>
-<div class=container>
+
+<div class="container">
+
 <div class=row>
 <div class=col-lg-12>
 <h5 class=pull-right id=hello>Вітаємо, <a href=# data-toggle=modal data-target=#myModal>увійти в особистий кабінет</a>
@@ -58,151 +63,223 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </form>
 </div>
 <div class=modal-footer>
-<a class="btn btn-primary" href="/registration">Реєстрація</a>
+<a class="btn btn-primary" href=/registration>Реєстрація</a>
 <button type=submit class="btn btn-primary" onclick = "login_1();" id = "login_0">Увійти</button>
 </div>
 </div>
 </div>
 </div>
-<a href=/><img src=/img/logo.png alt="Кабінет електроних сервісів: SmartMelitopol" style="float:left;width:80px;height:80px;margin:10px 10px 0 0"/></a>
-<h4><p class=text-primary><b>SmartCity. <br>Кабінет електронних сервісів</b></p></h4>
+<a href="/"><img src=img/logo.png alt="Кабінет електроних сервісів: SmartMelitopol" style="float:left;width:40px;height:40px;margin:10px 10px 0 0"/></a>
+<h4><p style="font-family: 'Russo One', sans-serif;" class=text-primary><b>SmartCity. Melitopol <br>Кабінет електронних сервісів</b></p></h4>
 </div>
 </div>
-</div>
-</div>
-<div class=container style="background-color: #ffffff;">
-<div class=page-header>
-<ul class="nav nav-pills">
-<li><a href=/concept>Концепція </a></li>
-<li><a href=/>Проекти </a></li>
-<li><a href=/news>Новини </a></li>
-<li><a href=http://www.mlt.gov.ua>Міська влада </a></li>
-<li><a href=/forum>Форум </a></li>
-<li><a href=/faq>Допомога </a></li>
-<form class="navbar-form navbar-left pull-right" role=search>
-<div class=form-group>
-<input type=text class=form-control placeholder="Пошук сервісів">
-</div>
-<button type=submit class="btn btn-default">Пошук</button>
-</form>
-</ul>
-</div>
-<div class="alert alert-dismissible alert-success">
-<button type=button class=close data-dismiss=alert>&times;</button>
-<strong>Увага!</strong> Сайт знаходиться в розробці, працює <a href=# class=alert-link>в режимі обмеженого доступу</a>.
-</div>
-<div class=row>
-<div class=col-md-6>
-<figure class=opacity>
-<div id=rockit>
-<link><a href=/g2c>
-<picture>
-<source srcset=/img/btn_1_320px.jpg media="(max-width: 450px)">
-<img class="bottom img-rounded" src=/img/btn_1_1.jpg alt="Послуги населенню. G2C"/>
-<img class="top img-rounded" src=/img/btn_1.jpg alt="Послуги населенню. G2C" />
-</picture>
-</a>
-</div>
-<figcaption>
-<h2>Послуги населенню. <span>G2C</span></h2>
-<p>Перелік послуг, доступних для громадян</p>
-<a href=/g2c>And more</a>
-</figcaption>
-</figure><br>
-</div>
-<div class=col-md-6>
-<figure class=opacity>
-<div id=rockit>
-<link><a href=/g2g>
-<picture>
-<source srcset=/img/btn_2_320px.jpg media=(max-width:450px)>
-<img class="bottom img-rounded" src=/img/btn_2_1.jpg alt="Моє місто. G2G" />
-<img class="top img-rounded" src=/img/btn_2.jpg alt="Моє місто. G2G" />
-</picture>
-</a>
-</div>
-<figcaption>
-<h2>Моє місто. <span>G2G</span></h2>
-<p>Послуги та сервіси для держслубовців</p>
-<a href=/g2g>And more</a>
-</figcaption>
-</figure>
-</div>
-</div>
-<div class=row>
-<br>
-<div class=col-md-6>
-<figure class=opacity>
-<div id=rockit>
-<link><a href=/g2b>
-<picture>
-<source srcset=/img/btn_3_320px.jpg media=(max-width:450px)>
-<img class="bottom img-rounded" src=/img/btn_3_1.jpg alt="Підприємцям. G2B" />
-<img class="top img-rounded" src=/img/btn_3.jpg alt="Підприємцям. G2B" />
-</picture>
-</a>
-</div>
-<figcaption>
-<h2>Підприємцям. <span>G2B</span></h2>
-<p>Сервіси та взаємодія між бізнесом та владою</p>
-<a href=/g2b>And more</a>
-</figcaption>
-</figure><br>
-</div>
-<div class=col-md-6>
-<figure class=opacity>
-<div id=rockit>
-<link><a href=/all>
-<picture>
-<source srcset=/img/btn_all_320px.jpg media=(max-width:450px)>
-<img class="bottom img-rounded" src=/img/btn_all_1.jpg alt="Усі послуги" />
-<img class="top img-rounded" src=/img/btn_all.jpg alt="Усі послуги" />
-</picture>
-</a>
-</div>
-<figcaption>
-<h2>Усі <span>послуги.</span></h2>
-<p>Перелік усіх доступних послуг та сервісів</p>
-<a href=/all>And more</a>
-</figcaption>
-</figure>
-</div>
-</div>
-<div class=page-header>
-</div>
-<h1><p class=text-primary style=text-align:center><b>Ваші найбільш вживані сервіси SmartCity.</b></p></h1>
-<div class=list-group>
-<a href="/g2c/socialny_sahist" class=list-group-item>Калькулятор субсидій/інформація про статус</a>
-<a href="g2c/cabinet_platnika" class=list-group-item>Калькулятор та кабінет платника комунальних послуг</a>
-<a href="/g2b/derzhavny_zakupivli" class=list-group-item>Офіційні закупівлі</a>
-<a href="/g2g/energo-efficiency" class=list-group-item>Муніципальне майно. Енергетика</a>
-<a href="/g2g/stan_dorig" class=list-group-item>Статус доріг міста</a>
-<a href="/g2c/cherga_v_dnz" class=list-group-item>Черга в ДНЗ</a>
-<a href="/g2c/reestratura" class=list-group-item>Записатись к лікару</a>
-<a href="/g2c/routes" class=list-group-item>Громадський транспорт</a>
-<a href="/g2c/online-route" class=list-group-item>Транспорт-онлайн</a>
-<a href="/g2b/prozorro_explore" class=list-group-item>Інфографіка Prozorro</a>
 
-<a href=/404 class=list-group-item>Оформлення паспорта прив’язки тимчасової споруди для провадження підприємницької діяльності</a>
 </div>
+
+<div class="container-fluid" style="background-color: #222222;">
+<nav class="navbar navbar-inverse" style="border-color: #222222;">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://smartcity.mlt.gov.ua">SmartCity. Melitopol</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/concept">Концепція</a></li>
+      <li><a href="/">Проекти <span class=badge>42</span></a></li>
+      <li><a href="/forum">Форум </a></li>      
+      <li><a href="/faq">Допомога </a></li>
+    </ul>
+      <form class="navbar-form navbar-right" role=search>
+      <div class="form-group">
+      <input type=text class=form-control placeholder="Пошук сервісів">
+      </div>
+      <button type=submit class="btn btn-default">Пошук</button>
+      </form>
+  </div>
+</nav>
+</div>
+
+<div class="container-fluid" id="moto">
+	<div class="container" style="text-shadow: 3px 3px 5px black, 0 0 20px white, 0 0 5px blue;">
+		<div class="row">
+			<div class="col-lg-3">
+			<h1><b>Моє місто</b><h1>
+			<h3>Сервіси та інформація про місто.</h3>
+			</div>		
+		</div>	
+	</div>	
+</div>
+
+<div class="container-fluid" style="background-color: #222222;">	
+		<div class="row">
+			<div class="col-lg-6 placeholder" style="padding: 0">
+				<figure class="opacity">
+				<a href="/g2c/socialny_sahist" title="Калькулятор субсидій, відповіді на часті питання, правда та міфи про субсидії" style="text-decoration: none; color: #fff">
+				<img alt="" src="/images/placeholder01.jpg" width=100% height=100% style="object-fit: cover;" >
+				<h1 class="sheader1"><b>Субсидії</b><h1>
+				<figcaption>
+				<h1 style="transform: scale(1, 1); position: absolute; top: 50px; left: 50px; width: 100%; text-shadow: 3px 3px 5px black, 0 0 20px white, 0 0 50px white;"><b>Субсидії</b><h1>
+				<h5 style="position: absolute; bottom: 50px; left: 70px; text-shadow: 1px 1px 3px black, 0 0 20px white, 0 0 5px blue;">Відомості про мою субсидію, калькулятор субсидій, відповіді на часті питання, "міські легенди" - чутки та правда про субсидії.</h5>
+				</figcaption>				
+				</a>
+				</figure>
+			</div>
+			<div class="col-lg-3 placeholder" style="padding: 0">
+				<figure class="opacity">
+				<a href="/g2c/cherga_v_dnz" title="Електронна черга в дитячий навчальний заклад" style="text-decoration: none; color: #fff">
+				<img alt="" src="/images/placeholder02.jpg" width=100% height=100% style="object-fit: cover;" >
+				<h1 class="sheader1"><b>Моя черга в садочок</b><h1>
+				<figcaption>
+				<h1 style="transform: scale(1, 1); position: absolute; top: 50px; left: 50px; width: 100%; text-shadow: 3px 3px 5px black, 0 0 20px white, 0 0 50px white;"><b>Моя черга в садочок</b><h1>
+				<h5 style="position: absolute; bottom: 50px; left: 70px;">Черга в дитячий садочок. Перевірити свою чергу, зареєструвати дитину в дитячий садочок.</h5>
+				</figcaption>
+				</a>
+				</figure>
+			</div>
+			<div class="col-lg-3 placeholder" style="padding: 0">
+				<figure class="opacity">
+				<a href="/g2b/derzhavny_zakupivli" title="Прозорі державні закупівлі. Сервіс Prozorro. Чесний бізнес." style="text-decoration: none; color: #fff">
+				<img alt="" src="/images/placeholder03.jpg" width=100% height=100% style="object-fit: cover;" >
+				<h1 class="sheader1"><b>Державні закупівлі</b><h1>
+				<figcaption>
+				<h1 style="transform: scale(1, 1); position: absolute; top: 50px; left: 50px; width: 100%; text-shadow: 3px 3px 5px black, 0 0 20px white, 0 0 50px white;"><b>Державні закупівлі</b><h1>
+				<h5 style="position: absolute; bottom: 50px; left: 70px; text-shadow: 1px 1px 3px black, 0 0 20px white, 0 0 5px blue;">Переглянути тендери, замовлення на товари та послуги. Зробити пропозицію по продажу державним органам товарів чи послуг. Прозорий бізнес з Prozorro.</h5>
+				</figcaption>				
+				</a>
+				</figure>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 placeholder" style="padding: 0">
+				<figure class="opacity">
+				<a href="/g2g/stan_dorig" title="Стан шляхів міста Мелітополя" style="text-decoration: none; color: #fff">
+				<img alt="" src="/images/placeholder04.jpg" width=100% height=100% style="object-fit: cover;" >
+				<h1 class="sheader1"><b>Стан доріг</b><h1>
+				<figcaption>
+				<h1 style="transform: scale(1, 1); position: absolute; top: 50px; left: 50px; width: 100%; text-shadow: 3px 3px 5px black, 0 0 20px white, 0 0 50px white;"><b>Стан доріг</b><h1>
+				<h5 style="position: absolute; bottom: 50px; left: 70px;">Стан шляхів, розказати про проблеми дорожного покриття, внести власну примітку.</h5>
+				</figcaption>
+				</a>
+				</figure>
+			</div>
+			<div class="col-lg-6 placeholder" style="padding: 0">
+				<figure class="opacity">
+				<a href="/g2g/energo-efficiency" title="Моніторинг енергоспоживання ресурсів комунальними закладами міста" style="text-decoration: none; color: #fff">
+				<img alt="" src="/images/placeholder05.jpg" width=100% height=100% style="object-fit: cover;" >
+				<h1 class="sheader1"><b>Енергоспоживання міста</b><h1>
+				<figcaption>
+				<h1 style="transform: scale(1, 1); position: absolute; top: 50px; left: 50px; width: 100%; text-shadow: 3px 3px 5px black, 0 0 20px white, 0 0 50px white;"><b>Енергоспоживання міста</b><h1>
+				<h5 style="position: absolute; bottom: 50px; left: 70px; text-shadow: 1px 1px 3px black, 0 0 20px white, 0 0 5px blue;">Дізнатись кількість спожитої енергії комунальними закладами міста. Порівняння між закладами та типами спожитої енергії: електричної, теплової, газових та водних ресурсів.</h5>
+				</figcaption>				
+				</a>
+				</figure>
+			</div>
+			<div class="col-lg-3 placeholder" style="padding: 0">
+				<figure class="opacity">
+				<a href="/g2c/routes" title="Схеми та маршрути руху громадського транспорту." style="text-decoration: none; color: #fff">
+				<img alt="" src="/images/placeholder06.jpg" width=100% height=100% style="object-fit: cover;" >
+				<h1 class="sheader1"><b>Громадський транспорт</b><h1>
+				<figcaption>
+				<h1 style="transform: scale(1, 1); position: absolute; top: 50px; left: 50px; width: 100%; text-shadow: 3px 3px 5px black, 0 0 20px white, 0 0 50px white;"><b>Громадський транспорт</b><h1>
+				<h5 style="position: absolute; bottom: 50px; left: 70px;">Схема руху та види громадського транспорту міста Мелітополя.</h5>
+				</figcaption>
+				</a>
+				</figure>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 placeholder" style="padding: 0">
+				<figure class="opacity">
+				<a href="/g2c/online-route" title="Громадський транспорт Мелітополя онлайн." style="text-decoration: none; color: #fff">
+				<img alt="" src="/images/placeholder07.jpg" width=100% height=100% style="object-fit: cover;" >
+				<h1 class="sheader1"><b>Транспорт-онлайн</b><h1>
+				<figcaption>
+				<h1 style="transform: scale(1, 1); position: absolute; top: 50px; left: 50px; width: 100%; text-shadow: 3px 3px 5px black, 0 0 20px white, 0 0 50px white;"><b>Транспорт-онлайн</b><h1>
+				<h5 style="position: absolute; bottom: 50px; left: 70px; text-shadow: 1px 1px 3px black, 0 0 20px white, 0 0 5px blue;">Прокласти маршрут на громадському транспорті міста, обрати види транспорту для пересування, розрахувати поїздку по місту Мелітополю.</h5>
+				</figcaption>				
+				</a>
+				</figure>
+			</div>
+			<div class="col-lg-3 placeholder" style="padding: 0">
+				<figure class="opacity">
+				<a href="/g2c/reestratura" title="Електронна черга в лікарняний заклад." style="text-decoration: none; color: #fff">
+				<img alt="" src="/images/placeholder08.jpg" width=100% height=100% style="object-fit: cover;" >
+				<h1 class="sheader1"><b>Реєстратура</b><h1>
+				<figcaption>
+				<h1 style="transform: scale(1, 1); position: absolute; top: 50px; left: 50px; width: 100%; text-shadow: 3px 3px 5px black, 0 0 20px white, 0 0 50px white;"><b>Реєстратура</b><h1>
+				<h5 style="position: absolute; bottom: 50px; left: 70px;">Обрати лікаря, стати в електронну чергу, відвідання лікаря без незручних черг.</h5>
+				</figcaption>
+				</a>
+				</figure>
+			</div>
+			<div class="col-lg-3 placeholder" style="padding: 0">
+				<figure class="opacity">
+				<a href="/faq" title="Відповіді на Часті Питання. Як користуватись сервісами сайта?" style="text-decoration: none; color: #fff">
+				<img alt="" src="/images/placeholder09.jpg" width=100% height=100% style="object-fit: cover;" >
+				<h1 class="sheader1"><b>Відповіді</b><h1>
+				<figcaption>
+				<h1 style="transform: scale(1, 1); position: absolute; top: 50px; left: 50px; width: 100%; text-shadow: 3px 3px 5px black, 0 0 20px white, 0 0 50px white;"><b>Відповіді</b><h1>
+				<h5 style="position: absolute; bottom: 50px; left: 70px;">Часті питання та відповіді на них.</h5>
+				</figcaption>
+				</a>
+				</figure>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 placeholder" style="padding: 0">
+				<figure class="opacity">
+				<a href="/g2b/prozorro_explore" title="Державні закупівлі Prozorro. Аналіз показників." style="text-decoration: none; color: #fff">
+				<img alt="" src="/images/placeholder10.jpg" width=100% height=100% style="object-fit: cover;" >
+				<h1 class="sheader1"><b>Інфографіка Prozorro</b><h1>
+				<figcaption>
+				<h1 style="transform: scale(1, 1); position: absolute; top: 50px; left: 50px; width: 100%; text-shadow: 3px 3px 5px black, 0 0 20px white, 0 0 50px white;"><b>Інфографіка Prozorro</b><h1>
+				<h5 style="position: absolute; bottom: 50px; left: 70px; text-shadow: 1px 1px 3px black, 0 0 20px white, 0 0 5px blue;">Сукупна статистика угод укладених за допомогою сервісу Prozorro.</h5>
+				</figcaption>				
+				</a>
+				</figure>
+			</div>
+			<div class="col-lg-6 placeholder" style="padding: 0">
+				<figure class="opacity">
+				<a href="g2c/cabinet_platnika" title="Плата за комунальні послуги." style="text-decoration: none; color: #fff">
+				<img alt="" src="/images/placeholder01.jpg" width=100% height=100% style="object-fit: cover;" >
+				<h1 class="sheader1"><b>Комунальні послуги</b><h1>
+				<figcaption>
+				<h1 style="transform: scale(1, 1); position: absolute; top: 50px; left: 50px; width: 100%; text-shadow: 3px 3px 5px black, 0 0 20px white, 0 0 50px white;"><b>Комунальні послуги</b><h1>
+				<h5 style="position: absolute; bottom: 50px; left: 70px; text-shadow: 1px 1px 3px black, 0 0 20px white, 0 0 5px blue;">Сплатити за комунальні послуги.</h5>
+				</figcaption>				
+				</a>
+				</figure>
+			</div>
+			<div class="col-lg-3 placeholder" style="padding: 0">
+			</div>
+		</div>
+</div>
+
+<div class="container-fluid" style="background-color: #222222;">
+<div class="container">
 <div class=page-header>
 </div>
 <footer>
-<div class=row>
-<div class=col-lg-12>
-<ul class="nav nav-pills">
-<li class=pull-right><a href=#top>Наверх </a></li>
-<li><a href="/concept">Концепція </a></li>
-<li><a href="/">Проекти </a></li>
-<li><a href="/news">Новини </a></li>
-<li><a href="http://www.mlt.gov.ua">Міська влада </a></li>
-<li><a href="/forum">Форум </a></li>
-<li><a href="/faq">Допомога </a></li>
-<li><a href="/support">Підтримка </a></li>
-</ul>
-</div>
-</div>
+<nav class="navbar navbar-inverse" style="border-color: #222222;">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="/"><img src=img/logo.png alt="Кабінет електроних сервісів: SmartMelitopol" style="float:left;width:25px;height:25px;margin:10px 5px 5px 5px;"/></a>
+      <a class="navbar-brand" href="http://smartcity.mlt.gov.ua">SmartCity. Melitopol</a>
+    </div>
+    <ul class="nav navbar-nav">
+	  <li><a href="/concept">Концепція</a></li>
+      <li><a href="/">Проекти</a></li>
+      <li><a href="/forum">Форум </a></li>      
+      <li><a href="/faq">Допомога </a></li>
+	<li><a href=/support>Підтримка </a>    
+    </ul>
+    <ul class="nav navbar-nav pull-right">
+    <li class=pull-right><a href=#top>Наверх </a></li>  
+    </ul>
+  </div>
+</nav>
 </footer>
 </div>
+</div>
+
 </body>
 </html>
